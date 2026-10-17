@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "RAJAL — Umetnost dunje i meda",
+    "description": "Rajal Distillery liker od dunje i meda. Porodična tradicija od 1999. godine — zrela dunja, prirodni livadski med i brižljivo čuvana citrusna tajna."
+  },
+  "nav": {
+    "skip": "Pređi na sadržaj",
+    "home": "Rajal Distillery — na vrh stranice",
+    "primary": "Glavna navigacija",
+    "menuOpen": "Meni",
+    "menuClose": "Zatvori",
+    "language": "Jezik",
+    "links": {
+      "story": "Priča",
+      "ingredients": "Sastojci",
+      "craft": "Zanat",
+      "experience": "Doživljaj",
+      "bottle": "Boca",
+      "contact": "Kontakt"
+    }
+  },
+  "draftNotice": "Nacrt prevoda — čeka odobrenje.",
+  "hero": {
+    "eyebrow": "Rajal Distillery — od 1999.",
+    "titleA": "Umetnost",
+    "titleB": "dunje i meda.",
+    "lead": "Porodična tradicija. Najbolji sastojci prirode. Tajna koju vredi otkriti.",
+    "cta": "Otkrijte priču",
+    "scroll": "Skrolujte dalje",
+    "imageAlt": "Boca Rajal likera od dunje i meda među kamenjem"
+  },
+  "story": {
+    "eyebrow": "01 / Naša priča",
+    "titleA": "Neke stvari",
+    "titleB": "vredi čekati.",
+    "body": [
+      "Nastao iz porodične tradicije koja traje od 1999. godine, naš liker spaja bogatstvo dunje, nežnu slatkoću livadskog meda i brižljivo čuvanu citrusnu tajnu.",
+      "Svaka boca nosi deo naše priče."
+    ],
+    "imageAlt": "Redovi stabala dunje punih zrelih plodova pod vedrim jesenjim nebom",
+    "detailAlt": "Zrele dunje na olistaloj grani"
+  },
+  "ingredients": {
+    "eyebrow": "02 / Sastojci",
+    "titleA": "Najbolje iz prirode.",
+    "titleB": "I malo tajne.",
+    "intro": "Tri elementa se spajaju u izuzetan liker — zrela dunja, prirodni livadski med i citrusna nota koju čuvamo za sebe.",
+    "progressLabel": "Sastojci",
+    "quince": {
+      "label": "I — Dunja",
+      "title": "Plod sa karakterom.",
+      "text": "Pažljivo birana zbog izražajne arome i prirodne voćnosti.",
+      "imageAlt": "Zrela zlatna dunja među listovima na grani"
+    },
+    "honey": {
+      "label": "II — Livadski med",
+      "title": "Slatkoća prirode.",
+      "text": "100% prirodni livadski med donosi toplinu i balans.",
+      "imageAlt": "Pčele na zlatnom saću"
+    },
+    "secret": {
+      "label": "III — Tajna",
+      "title": "Jedna nota ostaje tajna.",
+      "text": "Suptilan dodir citrusa zaokružuje kompoziciju. Njegov identitet zadržavamo za sebe."
+    }
+  },
+  "craft": {
+    "eyebrow": "03 / Zanat",
+    "titleA": "Stvoren sa strpljenjem.",
+    "titleB": "Definisan karakterom.",
+    "body": [
+      "Za ovaj liker potrebni su vreme, iskustvo i preciznost. Iza svake boce stoji posvećenost porodične srpske destilerije."
+    ],
+    "principles": [
+      "Poštovanje prema sastojcima.",
+      "Poštovanje prema procesu.",
+      "Poštovanje prema tradiciji."
+    ],
+    "caption": "Livadski med počinje od pčela.",
+    "imageAlt": "Pčelar u zaštitnoj opremi podiže ram sa saćem iz košnice",
+    "detailAlt": "Ruke u rukavicama drže drveni ram sa saćem prekrivenim pčelama"
+  },
+  "experience": {
+    "eyebrow": "04 / Doživljaj",
+    "titleA": "Aroma. Balans.",
+    "titleB": "Karakter.",
+    "body": "Izražajna dunja, nežne note meda i suptilna citrusna svežina spajaju se u svakom gutljaju.",
+    "servesTitle": "Kako služiti",
+    "serves": [
+      "Čist, blago rashlađen",
+      "Sa ledom",
+      "Kao digestiv",
+      "U koktelima"
+    ],
+    "pairingsTitle": "Lepo se slaže sa",
+    "pairings": [
+      "Plemenitim sirevima",
+      "Tamnom čokoladom",
+      "Voćnim desertima",
+      "Orašastim plodovima"
+    ],
+    "imageAlt": "Boca Rajal likera od dunje i meda pored napunjene čašice"
+  },
+  "bottle": {
+    "eyebrow": "05 / Boca",
+    "titleA": "Boca koju",
+    "titleB": "vredi podeliti.",
+    "facts": [
+      { "label": "Zapremina", "value": "0,7 L" },
+      { "label": "Alkohol", "value": "18% vol." },
+      { "label": "Poreklo", "value": "Proizvedeno u Srbiji" }
+    ],
+    "body": "Proizvodi se u namerno ograničenim godišnjim količinama. Nije masovna proizvodnja. Stvoren da se pamti.",
+    "cta": "Pošaljite upit",
+    "imageAlt": "Boca Rajal likera od dunje i meda sa crno-zlatnom etiketom među kamenjem"
+  },
+  "contact": {
+    "eyebrow": "06 / Kontakt",
+    "titleA": "Dodajte malo karaktera",
+    "titleB": "svojoj kolekciji.",
+    "body": "Bilo da tražite posebnu bocu, nezaboravan poklon ili premium dodatak ugostiteljskoj ponudi, rado ćemo vas čuti.",
+    "privateTitle": "Privatni upiti",
+    "privateText": "Pitanja o likeru, poklonima ili dostupnosti.",
+    "tradeTitle": "Saradnja i distribucija",
+    "tradeText": "Za distributere, uvoznike, hotele, restorane, barove, specijalizovane prodavnice i korporativne poklone.",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefon",
+    "pending": "Kontakt podaci uskoro.",
+    "imageAlt": "Pčelar drži bocu Rajal likera od dunje i meda"
+  },
+  "footer": {
+    "tagline": "Porodična srpska destilerija · Od 1999.",
+    "product": "Liker od dunje i meda · 0,7 L · 18% vol.",
+    "responsible": "Uživajte odgovorno. Namenjeno punoletnim osobama.",
+    "legalPending": "Pravne informacije biće objavljene ovde.",
+    "legal": {
+      "privacy": "Politika privatnosti",
+      "imprint": "Impresum",
+      "terms": "Uslovi korišćenja"
+    },
+    "rights": "Rajal Distillery. Sva prava zadržana."
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena.",
+    "back": "Nazad na početnu"
+  }
+}

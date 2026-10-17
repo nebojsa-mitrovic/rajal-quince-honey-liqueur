@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "RAJAL — The Art of Quince & Honey",
+    "description": "Rajal Distillery Quince Honey Liqueur. A family tradition since 1999 — ripe quince, natural meadow honey and a carefully guarded citrus secret."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "Rajal Distillery — back to top",
+    "primary": "Main navigation",
+    "menuOpen": "Menu",
+    "menuClose": "Close",
+    "language": "Language",
+    "links": {
+      "story": "Story",
+      "ingredients": "Ingredients",
+      "craft": "Craft",
+      "experience": "Experience",
+      "bottle": "Bottle",
+      "contact": "Contact"
+    }
+  },
+  "draftNotice": "",
+  "hero": {
+    "eyebrow": "Rajal Distillery — Since 1999",
+    "titleA": "The Art of",
+    "titleB": "Quince & Honey.",
+    "lead": "A family tradition. Nature’s finest ingredients. A secret worth discovering.",
+    "cta": "Discover the story",
+    "scroll": "Scroll to explore",
+    "imageAlt": "A bottle of Rajal Quince Honey Liqueur standing among stones"
+  },
+  "story": {
+    "eyebrow": "01 / Our Story",
+    "titleA": "Some things are",
+    "titleB": "worth taking time for.",
+    "body": [
+      "Born from a family tradition dating back to 1999, our liqueur brings together the richness of quince, the gentle sweetness of meadow honey and a carefully guarded citrus secret.",
+      "Every bottle carries a part of our story."
+    ],
+    "imageAlt": "Rows of quince trees heavy with ripe fruit under a clear autumn sky",
+    "detailAlt": "Ripe quinces hanging from a leafy branch"
+  },
+  "ingredients": {
+    "eyebrow": "02 / Ingredients",
+    "titleA": "Nature’s finest.",
+    "titleB": "A little mystery.",
+    "intro": "Three elements come together to create an extraordinary liqueur — ripe quince, natural meadow honey and a citrus note we keep to ourselves.",
+    "progressLabel": "Ingredients",
+    "quince": {
+      "label": "I — Quince",
+      "title": "Fruit with character.",
+      "text": "Carefully selected for its expressive aroma and natural fruitiness.",
+      "imageAlt": "A ripe golden quince among leaves on the branch"
+    },
+    "honey": {
+      "label": "II — Meadow honey",
+      "title": "Nature’s sweetness.",
+      "text": "100% natural meadow honey brings warmth and balance.",
+      "imageAlt": "Honeybees at work on a golden honeycomb"
+    },
+    "secret": {
+      "label": "III — The secret",
+      "title": "One note remains a secret.",
+      "text": "A subtle touch of citrus completes the composition. Its identity is ours to keep."
+    }
+  },
+  "craft": {
+    "eyebrow": "03 / The Craft",
+    "titleA": "Crafted with patience.",
+    "titleB": "Defined by character.",
+    "body": [
+      "Creating this liqueur takes time, experience and precision. Behind every bottle is the dedication of a family-owned Serbian distillery."
+    ],
+    "principles": [
+      "Respect the ingredients.",
+      "Respect the process.",
+      "Respect the tradition."
+    ],
+    "caption": "Meadow honey begins with the bees.",
+    "imageAlt": "A beekeeper in protective clothing lifting a honeycomb frame from a hive",
+    "detailAlt": "Gloved hands holding a wooden frame of honeycomb covered with bees"
+  },
+  "experience": {
+    "eyebrow": "04 / The Experience",
+    "titleA": "Aroma. Balance.",
+    "titleB": "Character.",
+    "body": "Expressive quince, delicate honey notes and a subtle citrus freshness come together in every sip.",
+    "servesTitle": "How to serve",
+    "serves": [
+      "Neat, slightly chilled",
+      "Over ice",
+      "As a digestif",
+      "In cocktails"
+    ],
+    "pairingsTitle": "Pairs well with",
+    "pairings": [
+      "Fine cheeses",
+      "Dark chocolate",
+      "Fruit desserts",
+      "Nuts"
+    ],
+    "imageAlt": "A bottle of Rajal Quince Honey Liqueur beside a filled liqueur glass"
+  },
+  "bottle": {
+    "eyebrow": "05 / The Bottle",
+    "titleA": "A bottle worth",
+    "titleB": "sharing.",
+    "facts": [
+      { "label": "Volume", "value": "0.7 L" },
+      { "label": "Alcohol", "value": "18% vol." },
+      { "label": "Origin", "value": "Made in Serbia" }
+    ],
+    "body": "Produced in deliberately limited annual quantities. Not mass produced. Created to be remembered.",
+    "cta": "Make an enquiry",
+    "imageAlt": "Rajal Quince Honey Liqueur bottle with its black and gold label, set among rocks"
+  },
+  "contact": {
+    "eyebrow": "06 / Get in touch",
+    "titleA": "Bring a little character",
+    "titleB": "to your collection.",
+    "body": "Whether you’re looking for a distinctive bottle, a memorable gift, or a premium addition to your hospitality offering, we’d love to hear from you.",
+    "privateTitle": "Private enquiries",
+    "privateText": "Questions about the liqueur, gifting or availability.",
+    "tradeTitle": "Trade & partnerships",
+    "tradeText": "For distributors, importers, hotels, restaurants, bars, specialty retailers and corporate gifting.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "pending": "Contact details coming soon.",
+    "imageAlt": "A beekeeper holding a bottle of Rajal Quince Honey Liqueur"
+  },
+  "footer": {
+    "tagline": "Family-owned Serbian distillery · Since 1999",
+    "product": "Quince Honey Liqueur · 0.7 L · 18% vol.",
+    "responsible": "Please enjoy responsibly. Intended for adults of legal drinking age.",
+    "legalPending": "Legal information will be published here.",
+    "legal": {
+      "privacy": "Privacy policy",
+      "imprint": "Legal notice",
+      "terms": "Terms of use"
+    },
+    "rights": "Rajal Distillery. All rights reserved."
+  },
+  "notFound": {
+    "title": "This page could not be found.",
+    "back": "Return to the homepage"
+  }
+}

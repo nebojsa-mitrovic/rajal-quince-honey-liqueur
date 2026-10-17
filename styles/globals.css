@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+/* Landscape layouts wide enough for side-by-side hero art direction. */
+@custom-variant wide (@media (min-width: 900px) and (min-aspect-ratio: 1/1));
+
+@theme {
+  --color-espresso: #130e0b;
+  --color-night: #0b0503;
+  --color-olive: #252b1d;
+  --color-gold: #c8a16b;
+  --color-gold-soft: #d9bb8d;
+  --color-ivory: #f1e8d9;
+  --color-amber: #7a391b;
+  --color-muted: #c1b2a1;
+  --color-line: #5e4c38;
+
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.2, 0.65, 0.2, 1);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  background: var(--color-night);
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-espresso);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ---------- Typography ---------- */
+
+@layer components {
+  .eyebrow {
+    color: var(--color-gold);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    line-height: 1.6;
+    text-transform: uppercase;
+  }
+
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.9rem, 1.4rem + 6.2vw, 8rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .heading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.35rem, 1.45rem + 3.4vw, 5.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  .heading em,
+  .display em {
+    color: var(--color-gold);
+    font-style: italic;
+  }
+
+  .subheading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .prose-body {
+    color: var(--color-muted);
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+    line-height: 1.8;
+    text-wrap: pretty;
+  }
+
+  .text-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: color 0.3s var(--ease-out-soft), gap 0.3s var(--ease-out-soft);
+  }
+
+  .text-link:hover {
+    color: var(--color-gold);
+    gap: 1.35rem;
+  }
+}
+
+/* ---------- Photographic edge treatments (no hard section edges) ---------- */
+
+@utility fade-y {
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%, #000 72%, transparent 100%);
+}
+
+@utility fade-bottom {
+  mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+}
+
+@utility fade-left {
+  mask-image: linear-gradient(to right, transparent 0%, #000 30%);
+}
+
+@utility fade-frame-left {
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 30%),
+    linear-gradient(to bottom, transparent 0%, #000 16%, #000 84%, transparent 100%);
+  mask-composite: intersect;
+}
+
+@utility fade-frame-all {
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* ---------- Hero art direction ---------- */
+
+.hero-media {
+  position: relative;
+  height: min(150vw, 74svh);
+  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+}
+
+.hero-media img {
+  object-position: 50% 72%;
+}
+
+@media (min-width: 900px) and (min-aspect-ratio: 1/1) {
+  .hero-media {
+    position: absolute;
+    top: 0;
+    right: max(2vw, calc((100vw - 120rem) / 2));
+    bottom: 0;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 26%, #000 90%, transparent 100%),
+      linear-gradient(to bottom, #000 82%, transparent 100%);
+    mask-composite: intersect;
+  }
+
+  .hero-media img {
+    object-position: 50% 50%;
+  }
+
+  .hero-copy {
+    max-width: min(54vw, 46rem);
+  }
+}
+
+/* ---------- Motion gating ----------
+   `.js` is set before first paint by an inline script in the root layout.
+   Content is hidden only when JS is available AND motion is allowed;
+   `.motion-fallback` reveals everything if the animation bundle never runs. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 2.5rem, 0);
+  }
+
+  .js.motion-fallback [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-enter {
+    animation: hero-enter 1.4s var(--ease-out-soft) both;
+  }
+
+  .hero-enter-delayed {
+    animation: hero-enter 1.4s 0.25s var(--ease-out-soft) both;
+  }
+
+  .hero-still-enter {
+    animation: hero-still 2.4s var(--ease-out-soft) both;
+  }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.75rem, 0);
+  }
+}
+
+@keyframes hero-still {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+/* Ingredients: pinned desktop sequence vs. stacked editorial fallback.
+   Keep this query in sync with DESKTOP_PIN_QUERY in PageMotion. */
+.ing-pinned {
+  display: none;
+}
+
+@media (min-width: 1024px) and (min-height: 600px) and (prefers-reduced-motion: no-preference) {
+  .js .ing-pinned {
+    display: block;
+  }
+
+  .js .ing-stacked {
+    display: none;
+  }
+
+  .js.motion-fallback .ing-pinned {
+    display: none;
+  }
+
+  .js.motion-fallback .ing-stacked {
+    display: block;
+  }
+}
+
+/* Mobile menu scroll lock */
+.menu-open,
+.menu-open body {
+  overflow: hidden;
+}

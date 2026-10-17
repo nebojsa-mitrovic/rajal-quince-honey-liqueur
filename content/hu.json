@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "RAJAL — A birs és a méz művészete",
+    "description": "Rajal Distillery birsalmás-mézes likőr. Családi hagyomány 1999 óta — érett birsalma, természetes réti méz és egy gondosan őrzött citrusos titok."
+  },
+  "nav": {
+    "skip": "Ugrás a tartalomhoz",
+    "home": "Rajal Distillery — vissza az oldal tetejére",
+    "primary": "Főmenü",
+    "menuOpen": "Menü",
+    "menuClose": "Bezárás",
+    "language": "Nyelv",
+    "links": {
+      "story": "Történet",
+      "ingredients": "Összetevők",
+      "craft": "Mesterség",
+      "experience": "Élmény",
+      "bottle": "Palack",
+      "contact": "Kapcsolat"
+    }
+  },
+  "draftNotice": "Fordítási vázlat — jóváhagyásra vár.",
+  "hero": {
+    "eyebrow": "Rajal Distillery — 1999 óta",
+    "titleA": "A birs és a méz",
+    "titleB": "művészete.",
+    "lead": "Családi hagyomány. A természet legjobb összetevői. Egy felfedezésre érdemes titok.",
+    "cta": "Fedezze fel a történetet",
+    "scroll": "Görgessen tovább",
+    "imageAlt": "Egy üveg Rajal birsalmás-mézes likőr kövek között"
+  },
+  "story": {
+    "eyebrow": "01 / Történetünk",
+    "titleA": "Vannak dolgok,",
+    "titleB": "amelyekre érdemes időt szánni.",
+    "body": [
+      "Az 1999-ig visszanyúló családi hagyományból született likőrünk a birsalma gazdagságát, a réti méz lágy édességét és egy gondosan őrzött citrusos titkot egyesít.",
+      "Minden palack a történetünk egy darabját hordozza."
+    ],
+    "imageAlt": "Érett gyümölccsel megrakott birsalmafák sorai tiszta őszi ég alatt",
+    "detailAlt": "Érett birsalmák egy lombos ágon"
+  },
+  "ingredients": {
+    "eyebrow": "02 / Összetevők",
+    "titleA": "A természet legjava.",
+    "titleB": "Egy csipetnyi rejtély.",
+    "intro": "Három elem találkozik egy rendkívüli likőrben — az érett birsalma, a természetes réti méz és egy citrusos jegy, amelyet megtartunk magunknak.",
+    "progressLabel": "Összetevők",
+    "quince": {
+      "label": "I — Birsalma",
+      "title": "Karakteres gyümölcs.",
+      "text": "Gondosan válogatva kifejező aromája és természetes gyümölcsössége miatt.",
+      "imageAlt": "Érett, aranysárga birsalma a levelek között az ágon"
+    },
+    "honey": {
+      "label": "II — Réti méz",
+      "title": "A természet édessége.",
+      "text": "A 100%-ban természetes réti méz melegséget és egyensúlyt ad.",
+      "imageAlt": "Méhek dolgoznak egy aranyló lépen"
+    },
+    "secret": {
+      "label": "III — A titok",
+      "title": "Egy jegy titok marad.",
+      "text": "Egy finom citrusos érintés teszi teljessé a kompozíciót. Hogy melyik gyümölcs, az a mi titkunk."
+    }
+  },
+  "craft": {
+    "eyebrow": "03 / A mesterség",
+    "titleA": "Türelemmel készítve.",
+    "titleB": "Karakter által meghatározva.",
+    "body": [
+      "Ennek a likőrnek az elkészítése időt, tapasztalatot és precizitást igényel. Minden palack mögött egy családi tulajdonú szerb lepárló elhivatottsága áll."
+    ],
+    "principles": [
+      "Tiszteljük az összetevőket.",
+      "Tiszteljük a folyamatot.",
+      "Tiszteljük a hagyományt."
+    ],
+    "caption": "A réti méz a méhekkel kezdődik.",
+    "imageAlt": "Védőruhás méhész egy lépkeretet emel ki a kaptárból",
+    "detailAlt": "Kesztyűs kezek méhekkel borított fa lépkeretet tartanak"
+  },
+  "experience": {
+    "eyebrow": "04 / Az élmény",
+    "titleA": "Aroma. Egyensúly.",
+    "titleB": "Karakter.",
+    "body": "Kifejező birs, finom mézes jegyek és egy leheletnyi citrusos frissesség találkozik minden kortyban.",
+    "servesTitle": "Fogyasztási javaslat",
+    "serves": [
+      "Tisztán, enyhén hűtve",
+      "Jéggel",
+      "Digestifként",
+      "Koktélokban"
+    ],
+    "pairingsTitle": "Jól illik hozzá",
+    "pairings": [
+      "Nemes sajtok",
+      "Étcsokoládé",
+      "Gyümölcsös desszertek",
+      "Diófélék"
+    ],
+    "imageAlt": "Egy üveg Rajal birsalmás-mézes likőr egy töltött likőröspohár mellett"
+  },
+  "bottle": {
+    "eyebrow": "05 / A palack",
+    "titleA": "Egy palack, amelyet",
+    "titleB": "érdemes megosztani.",
+    "facts": [
+      { "label": "Térfogat", "value": "0,7 L" },
+      { "label": "Alkohol", "value": "18% vol." },
+      { "label": "Származás", "value": "Szerbiában készült" }
+    ],
+    "body": "Szándékosan korlátozott éves mennyiségben készül. Nem tömegtermék. Arra teremtve, hogy emlékezetes legyen.",
+    "cta": "Ajánlatkérés",
+    "imageAlt": "Rajal birsalmás-mézes likőr palack fekete-arany címkével, sziklák között"
+  },
+  "contact": {
+    "eyebrow": "06 / Kapcsolat",
+    "titleA": "Egy kis karakter",
+    "titleB": "a gyűjteményébe.",
+    "body": "Akár különleges palackot, emlékezetes ajándékot vagy prémium kiegészítést keres vendéglátóhelye kínálatához, örömmel hallunk Önről.",
+    "privateTitle": "Magánmegkeresések",
+    "privateText": "Kérdések a likőrről, ajándékozásról vagy elérhetőségről.",
+    "tradeTitle": "Kereskedelem és partnerség",
+    "tradeText": "Forgalmazóknak, importőröknek, szállodáknak, éttermeknek, bároknak, szaküzleteknek és céges ajándékozáshoz.",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefon",
+    "pending": "Elérhetőségeink hamarosan.",
+    "imageAlt": "Egy méhész egy üveg Rajal birsalmás-mézes likőrt tart"
+  },
+  "footer": {
+    "tagline": "Családi tulajdonú szerb lepárló · 1999 óta",
+    "product": "Birsalmás-mézes likőr · 0,7 L · 18% vol.",
+    "responsible": "Fogyassza felelősséggel. Csak nagykorúak számára.",
+    "legalPending": "A jogi információk itt kerülnek közzétételre.",
+    "legal": {
+      "privacy": "Adatvédelem",
+      "imprint": "Impresszum",
+      "terms": "Felhasználási feltételek"
+    },
+    "rights": "Rajal Distillery. Minden jog fenntartva."
+  },
+  "notFound": {
+    "title": "Az oldal nem található.",
+    "back": "Vissza a kezdőlapra"
+  }
+}

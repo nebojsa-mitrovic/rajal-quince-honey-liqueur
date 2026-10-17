@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "RAJAL — Die Kunst von Quitte & Honig",
+    "description": "Rajal Distillery Quitten-Honig-Likör. Eine Familientradition seit 1999 — reife Quitte, natürlicher Wiesenhonig und ein sorgsam gehütetes Zitrusgeheimnis."
+  },
+  "nav": {
+    "skip": "Zum Inhalt springen",
+    "home": "Rajal Distillery — zum Seitenanfang",
+    "primary": "Hauptnavigation",
+    "menuOpen": "Menü",
+    "menuClose": "Schließen",
+    "language": "Sprache",
+    "links": {
+      "story": "Geschichte",
+      "ingredients": "Zutaten",
+      "craft": "Handwerk",
+      "experience": "Genuss",
+      "bottle": "Flasche",
+      "contact": "Kontakt"
+    }
+  },
+  "draftNotice": "Übersetzungsentwurf — noch nicht freigegeben.",
+  "hero": {
+    "eyebrow": "Rajal Distillery — seit 1999",
+    "titleA": "Die Kunst von",
+    "titleB": "Quitte & Honig.",
+    "lead": "Eine Familientradition. Die besten Zutaten der Natur. Ein Geheimnis, das es zu entdecken lohnt.",
+    "cta": "Die Geschichte entdecken",
+    "scroll": "Weiter scrollen",
+    "imageAlt": "Eine Flasche Rajal Quitten-Honig-Likör zwischen Steinen"
+  },
+  "story": {
+    "eyebrow": "01 / Unsere Geschichte",
+    "titleA": "Manche Dinge sind",
+    "titleB": "es wert, sich Zeit zu nehmen.",
+    "body": [
+      "Aus einer Familientradition entstanden, die bis ins Jahr 1999 zurückreicht, vereint unser Likör die Fülle der Quitte, die sanfte Süße von Wiesenhonig und ein sorgsam gehütetes Zitrusgeheimnis.",
+      "Jede Flasche trägt ein Stück unserer Geschichte."
+    ],
+    "imageAlt": "Reihen von Quittenbäumen voller reifer Früchte unter klarem Herbsthimmel",
+    "detailAlt": "Reife Quitten an einem belaubten Zweig"
+  },
+  "ingredients": {
+    "eyebrow": "02 / Zutaten",
+    "titleA": "Das Beste der Natur.",
+    "titleB": "Ein wenig Geheimnis.",
+    "intro": "Drei Elemente vereinen sich zu einem außergewöhnlichen Likör — reife Quitte, natürlicher Wiesenhonig und eine Zitrusnote, die wir für uns behalten.",
+    "progressLabel": "Zutaten",
+    "quince": {
+      "label": "I — Quitte",
+      "title": "Frucht mit Charakter.",
+      "text": "Sorgfältig ausgewählt für ihr ausdrucksstarkes Aroma und ihre natürliche Fruchtigkeit.",
+      "imageAlt": "Eine reife goldene Quitte zwischen Blättern am Zweig"
+    },
+    "honey": {
+      "label": "II — Wiesenhonig",
+      "title": "Die Süße der Natur.",
+      "text": "100 % natürlicher Wiesenhonig bringt Wärme und Balance.",
+      "imageAlt": "Honigbienen bei der Arbeit auf einer goldenen Wabe"
+    },
+    "secret": {
+      "label": "III — Das Geheimnis",
+      "title": "Eine Note bleibt ein Geheimnis.",
+      "text": "Ein feiner Hauch von Zitrus vollendet die Komposition. Welche Frucht es ist, bleibt unser Geheimnis."
+    }
+  },
+  "craft": {
+    "eyebrow": "03 / Das Handwerk",
+    "titleA": "Mit Geduld gefertigt.",
+    "titleB": "Von Charakter geprägt.",
+    "body": [
+      "Dieser Likör erfordert Zeit, Erfahrung und Präzision. Hinter jeder Flasche steht die Hingabe einer serbischen Brennerei in Familienbesitz."
+    ],
+    "principles": [
+      "Respekt vor den Zutaten.",
+      "Respekt vor dem Prozess.",
+      "Respekt vor der Tradition."
+    ],
+    "caption": "Wiesenhonig beginnt bei den Bienen.",
+    "imageAlt": "Ein Imker in Schutzkleidung hebt einen Wabenrahmen aus dem Bienenstock",
+    "detailAlt": "Hände in Handschuhen halten einen Holzrahmen mit Waben voller Bienen"
+  },
+  "experience": {
+    "eyebrow": "04 / Der Genuss",
+    "titleA": "Aroma. Balance.",
+    "titleB": "Charakter.",
+    "body": "Ausdrucksstarke Quitte, zarte Honignoten und eine feine Zitrusfrische vereinen sich in jedem Schluck.",
+    "servesTitle": "Serviervorschlag",
+    "serves": [
+      "Pur, leicht gekühlt",
+      "On the Rocks",
+      "Als Digestif",
+      "In Cocktails"
+    ],
+    "pairingsTitle": "Passt gut zu",
+    "pairings": [
+      "Feinem Käse",
+      "Dunkler Schokolade",
+      "Fruchtdesserts",
+      "Nüssen"
+    ],
+    "imageAlt": "Eine Flasche Rajal Quitten-Honig-Likör neben einem gefüllten Likörglas"
+  },
+  "bottle": {
+    "eyebrow": "05 / Die Flasche",
+    "titleA": "Eine Flasche, die man",
+    "titleB": "gerne teilt.",
+    "facts": [
+      { "label": "Inhalt", "value": "0,7 L" },
+      { "label": "Alkohol", "value": "18 % vol." },
+      { "label": "Herkunft", "value": "Hergestellt in Serbien" }
+    ],
+    "body": "In bewusst begrenzten Jahresmengen hergestellt. Keine Massenproduktion. Geschaffen, um in Erinnerung zu bleiben.",
+    "cta": "Anfrage senden",
+    "imageAlt": "Flasche Rajal Quitten-Honig-Likör mit schwarz-goldenem Etikett zwischen Felsen"
+  },
+  "contact": {
+    "eyebrow": "06 / Kontakt",
+    "titleA": "Ein wenig Charakter",
+    "titleB": "für Ihre Sammlung.",
+    "body": "Ob Sie eine besondere Flasche, ein unvergessliches Geschenk oder eine Premium-Ergänzung für Ihr Gastronomieangebot suchen — wir freuen uns auf Ihre Nachricht.",
+    "privateTitle": "Private Anfragen",
+    "privateText": "Fragen zum Likör, zu Geschenken oder zur Verfügbarkeit.",
+    "tradeTitle": "Handel & Partnerschaften",
+    "tradeText": "Für Distributoren, Importeure, Hotels, Restaurants, Bars, Fachhändler und Firmengeschenke.",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "pending": "Kontaktdaten folgen in Kürze.",
+    "imageAlt": "Ein Imker hält eine Flasche Rajal Quitten-Honig-Likör"
+  },
+  "footer": {
+    "tagline": "Serbische Brennerei in Familienbesitz · Seit 1999",
+    "product": "Quitten-Honig-Likör · 0,7 L · 18 % vol.",
+    "responsible": "Bitte verantwortungsvoll genießen. Für Erwachsene im gesetzlichen Mindestalter.",
+    "legalPending": "Rechtliche Informationen werden hier veröffentlicht.",
+    "legal": {
+      "privacy": "Datenschutz",
+      "imprint": "Impressum",
+      "terms": "Nutzungsbedingungen"
+    },
+    "rights": "Rajal Distillery. Alle Rechte vorbehalten."
+  },
+  "notFound": {
+    "title": "Diese Seite wurde nicht gefunden.",
+    "back": "Zur Startseite"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "RAJAL — L’art du coing et du miel",
+    "description": "Liqueur de coing au miel Rajal Distillery. Une tradition familiale depuis 1999 — coing mûr, miel de prairie naturel et un secret d’agrume jalousement gardé."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "home": "Rajal Distillery — haut de page",
+    "primary": "Navigation principale",
+    "menuOpen": "Menu",
+    "menuClose": "Fermer",
+    "language": "Langue",
+    "links": {
+      "story": "Histoire",
+      "ingredients": "Ingrédients",
+      "craft": "Savoir-faire",
+      "experience": "Dégustation",
+      "bottle": "Bouteille",
+      "contact": "Contact"
+    }
+  },
+  "draftNotice": "Traduction provisoire — en attente de validation.",
+  "hero": {
+    "eyebrow": "Rajal Distillery — depuis 1999",
+    "titleA": "L’art du",
+    "titleB": "coing et du miel.",
+    "lead": "Une tradition familiale. Le meilleur de la nature. Un secret à découvrir.",
+    "cta": "Découvrir l’histoire",
+    "scroll": "Faites défiler",
+    "imageAlt": "Une bouteille de liqueur de coing au miel Rajal posée parmi des pierres"
+  },
+  "story": {
+    "eyebrow": "01 / Notre histoire",
+    "titleA": "Certaines choses",
+    "titleB": "méritent qu’on prenne son temps.",
+    "body": [
+      "Née d’une tradition familiale remontant à 1999, notre liqueur réunit la richesse du coing, la douceur délicate du miel de prairie et un secret d’agrume jalousement gardé.",
+      "Chaque bouteille porte une part de notre histoire."
+    ],
+    "imageAlt": "Rangées de cognassiers chargés de fruits mûrs sous un ciel d’automne dégagé",
+    "detailAlt": "Coings mûrs suspendus à une branche feuillue"
+  },
+  "ingredients": {
+    "eyebrow": "02 / Ingrédients",
+    "titleA": "Le meilleur de la nature.",
+    "titleB": "Un peu de mystère.",
+    "intro": "Trois éléments s’unissent pour créer une liqueur extraordinaire — le coing mûr, le miel de prairie naturel et une note d’agrume que nous gardons pour nous.",
+    "progressLabel": "Ingrédients",
+    "quince": {
+      "label": "I — Coing",
+      "title": "Un fruit de caractère.",
+      "text": "Soigneusement sélectionné pour son arôme expressif et son fruité naturel.",
+      "imageAlt": "Un coing doré et mûr parmi les feuilles"
+    },
+    "honey": {
+      "label": "II — Miel de prairie",
+      "title": "La douceur de la nature.",
+      "text": "Un miel de prairie 100 % naturel apporte chaleur et équilibre.",
+      "imageAlt": "Des abeilles au travail sur un rayon de miel doré"
+    },
+    "secret": {
+      "label": "III — Le secret",
+      "title": "Une note reste secrète.",
+      "text": "Une subtile touche d’agrume complète la composition. Son identité, nous la gardons pour nous."
+    }
+  },
+  "craft": {
+    "eyebrow": "03 / Le savoir-faire",
+    "titleA": "Façonnée avec patience.",
+    "titleB": "Définie par son caractère.",
+    "body": [
+      "Cette liqueur demande du temps, de l’expérience et de la précision. Derrière chaque bouteille se trouve l’engagement d’une distillerie serbe familiale."
+    ],
+    "principles": [
+      "Respecter les ingrédients.",
+      "Respecter le processus.",
+      "Respecter la tradition."
+    ],
+    "caption": "Le miel de prairie commence avec les abeilles.",
+    "imageAlt": "Un apiculteur en tenue de protection soulève un cadre de rayons d’une ruche",
+    "detailAlt": "Des mains gantées tenant un cadre en bois couvert d’abeilles"
+  },
+  "experience": {
+    "eyebrow": "04 / La dégustation",
+    "titleA": "Arôme. Équilibre.",
+    "titleB": "Caractère.",
+    "body": "Coing expressif, notes délicates de miel et subtile fraîcheur d’agrume se rencontrent à chaque gorgée.",
+    "servesTitle": "Comment servir",
+    "serves": [
+      "Pure, légèrement fraîche",
+      "Sur glace",
+      "En digestif",
+      "En cocktail"
+    ],
+    "pairingsTitle": "S’accorde avec",
+    "pairings": [
+      "Les fromages fins",
+      "Le chocolat noir",
+      "Les desserts aux fruits",
+      "Les fruits secs"
+    ],
+    "imageAlt": "Une bouteille de liqueur de coing au miel Rajal à côté d’un verre rempli"
+  },
+  "bottle": {
+    "eyebrow": "05 / La bouteille",
+    "titleA": "Une bouteille",
+    "titleB": "à partager.",
+    "facts": [
+      { "label": "Volume", "value": "0,7 L" },
+      { "label": "Alcool", "value": "18 % vol." },
+      { "label": "Origine", "value": "Fabriqué en Serbie" }
+    ],
+    "body": "Produite en quantités annuelles volontairement limitées. Pas de production de masse. Créée pour qu’on s’en souvienne.",
+    "cta": "Faire une demande",
+    "imageAlt": "Bouteille de liqueur de coing au miel Rajal à l’étiquette noir et or, parmi des rochers"
+  },
+  "contact": {
+    "eyebrow": "06 / Contact",
+    "titleA": "Apportez un peu de caractère",
+    "titleB": "à votre collection.",
+    "body": "Que vous recherchiez une bouteille singulière, un cadeau mémorable ou un ajout haut de gamme à votre offre d’hôtellerie-restauration, nous serons ravis de vous lire.",
+    "privateTitle": "Demandes particulières",
+    "privateText": "Questions sur la liqueur, les cadeaux ou la disponibilité.",
+    "tradeTitle": "Professionnels & partenariats",
+    "tradeText": "Pour les distributeurs, importateurs, hôtels, restaurants, bars, cavistes et cadeaux d’entreprise.",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "pending": "Coordonnées bientôt disponibles.",
+    "imageAlt": "Un apiculteur tenant une bouteille de liqueur de coing au miel Rajal"
+  },
+  "footer": {
+    "tagline": "Distillerie serbe familiale · Depuis 1999",
+    "product": "Liqueur de coing au miel · 0,7 L · 18 % vol.",
+    "responsible": "L’abus d’alcool est dangereux pour la santé. À consommer avec modération.",
+    "legalPending": "Les informations légales seront publiées ici.",
+    "legal": {
+      "privacy": "Politique de confidentialité",
+      "imprint": "Mentions légales",
+      "terms": "Conditions d’utilisation"
+    },
+    "rights": "Rajal Distillery. Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Cette page est introuvable.",
+    "back": "Retour à l’accueil"
+  }
+}
