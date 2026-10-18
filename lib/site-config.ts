@@ -18,12 +18,6 @@ export const siteConfig = {
     phone: env(process.env.NEXT_PUBLIC_CONTACT_PHONE),
   },
 
-  legal: {
-    privacy: env(process.env.NEXT_PUBLIC_LEGAL_PRIVACY_URL),
-    imprint: env(process.env.NEXT_PUBLIC_LEGAL_IMPRINT_URL),
-    terms: env(process.env.NEXT_PUBLIC_LEGAL_TERMS_URL),
-  },
-
   /**
    * Hero video slot. Drop the files into `public/video/` and set
    * NEXT_PUBLIC_HERO_VIDEO=true. The still photo remains the poster and the

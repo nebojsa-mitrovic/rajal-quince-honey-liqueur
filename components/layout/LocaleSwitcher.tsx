@@ -6,7 +6,6 @@ export type LocaleOption = {
   code: string;
   nativeName: string;
   htmlLang: string;
-  draft: boolean;
 };
 
 type Props = {
@@ -55,11 +54,6 @@ export function LocaleSwitcher({ current, locales, label, inline = false }: Prop
       >
         <span className="w-7 text-xs font-semibold tracking-[0.14em] uppercase">{l.code}</span>
         <span>{l.nativeName}</span>
-        {l.draft ? (
-          <span title="Draft translation" className="ml-auto text-xs text-muted/70">
-            β
-          </span>
-        ) : null}
       </a>
     </li>
   ));

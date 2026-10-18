@@ -6,8 +6,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const languages = Object.fromEntries(
     approvedLocales.map((l) => [localeMeta[l].htmlLang, `${siteConfig.siteUrl}/${l}`]),
   );
-  return approvedLocales.map((locale) => ({
+  const pages = approvedLocales.map((locale) => ({
     url: `${siteConfig.siteUrl}/${locale}`,
     alternates: { languages },
   }));
+  const legal = approvedLocales.flatMap((locale) =>
+    ["privacy", "legal-notice"].map((path) => ({ url: `${siteConfig.siteUrl}/${locale}/${path}` })),
+  );
+  return [...pages, ...legal];
 }

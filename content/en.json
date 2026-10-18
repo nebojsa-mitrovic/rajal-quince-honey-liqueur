@@ -106,9 +106,18 @@
     "titleA": "A bottle worth",
     "titleB": "sharing.",
     "facts": [
-      { "label": "Volume", "value": "0.7 L" },
-      { "label": "Alcohol", "value": "18% vol." },
-      { "label": "Origin", "value": "Made in Serbia" }
+      {
+        "label": "Volume",
+        "value": "0.7 L"
+      },
+      {
+        "label": "Alcohol",
+        "value": "18% vol."
+      },
+      {
+        "label": "Origin",
+        "value": "Made in Serbia"
+      }
     ],
     "body": "Produced in deliberately limited annual quantities. Not mass produced. Created to be remembered.",
     "cta": "Make an enquiry",
@@ -132,16 +141,29 @@
     "tagline": "Family-owned Serbian distillery · Since 1999",
     "product": "Quince Honey Liqueur · 0.7 L · 18% vol.",
     "responsible": "Please enjoy responsibly. Intended for adults of legal drinking age.",
-    "legalPending": "Legal information will be published here.",
     "legal": {
+      "label": "Legal",
       "privacy": "Privacy policy",
       "imprint": "Legal notice",
-      "terms": "Terms of use"
+      "cookies": "Cookies & storage"
     },
     "rights": "Rajal Distillery. All rights reserved."
   },
   "notFound": {
     "title": "This page could not be found.",
     "back": "Return to the homepage"
+  },
+  "legalPage": {
+    "back": "Back to the homepage"
+  },
+  "ageGate": {
+    "title": "Welcome to Rajal Distillery",
+    "question": "Are you of legal drinking age in your country — at least 18 years old?",
+    "yes": "Yes, I am 18 or older",
+    "no": "No",
+    "deniedTitle": "We’re sorry.",
+    "deniedText": "You must be of legal drinking age to visit this website.",
+    "changeAnswer": "Change my answer",
+    "note": "Your confirmation is saved on this device for 30 days. No cookies, no tracking."
   }
 }

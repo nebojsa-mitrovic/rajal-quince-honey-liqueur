@@ -19,7 +19,7 @@
       "contact": "Contact"
     }
   },
-  "draftNotice": "Traduction provisoire — en attente de validation.",
+  "draftNotice": "",
   "hero": {
     "eyebrow": "Rajal Distillery — depuis 1999",
     "titleA": "L’art du",
@@ -106,9 +106,18 @@
     "titleA": "Une bouteille",
     "titleB": "à partager.",
     "facts": [
-      { "label": "Volume", "value": "0,7 L" },
-      { "label": "Alcool", "value": "18 % vol." },
-      { "label": "Origine", "value": "Fabriqué en Serbie" }
+      {
+        "label": "Volume",
+        "value": "0,7 L"
+      },
+      {
+        "label": "Alcool",
+        "value": "18 % vol."
+      },
+      {
+        "label": "Origine",
+        "value": "Fabriqué en Serbie"
+      }
     ],
     "body": "Produite en quantités annuelles volontairement limitées. Pas de production de masse. Créée pour qu’on s’en souvienne.",
     "cta": "Faire une demande",
@@ -132,16 +141,29 @@
     "tagline": "Distillerie serbe familiale · Depuis 1999",
     "product": "Liqueur de coing au miel · 0,7 L · 18 % vol.",
     "responsible": "L’abus d’alcool est dangereux pour la santé. À consommer avec modération.",
-    "legalPending": "Les informations légales seront publiées ici.",
     "legal": {
+      "label": "Informations légales",
       "privacy": "Politique de confidentialité",
       "imprint": "Mentions légales",
-      "terms": "Conditions d’utilisation"
+      "cookies": "Cookies et stockage"
     },
     "rights": "Rajal Distillery. Tous droits réservés."
   },
   "notFound": {
     "title": "Cette page est introuvable.",
     "back": "Retour à l’accueil"
+  },
+  "legalPage": {
+    "back": "Retour à l’accueil"
+  },
+  "ageGate": {
+    "title": "Bienvenue chez Rajal Distillery",
+    "question": "Avez-vous l’âge légal pour consommer de l’alcool dans votre pays — au moins 18 ans ?",
+    "yes": "Oui, j’ai 18 ans ou plus",
+    "no": "Non",
+    "deniedTitle": "Nous sommes désolés.",
+    "deniedText": "Vous devez avoir l’âge légal pour consommer de l’alcool pour visiter ce site.",
+    "changeAnswer": "Modifier ma réponse",
+    "note": "Votre confirmation est enregistrée sur cet appareil pendant 30 jours. Pas de cookies, pas de suivi."
   }
 }

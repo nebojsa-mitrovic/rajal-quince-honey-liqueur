@@ -10,6 +10,7 @@ import {
   locales,
   resolveLocale,
 } from "@/lib/i18n";
+import { AGE_STORAGE_DAYS, AGE_STORAGE_KEY } from "@/lib/age";
 import { siteConfig } from "@/lib/site-config";
 import ogImage from "@/public/images/bottle-studio-dark.jpg";
 import "@/styles/globals.css";
@@ -27,9 +28,10 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-// Runs before first paint: enables motion-only styles, and reveals all content
+// Runs before first paint: enables motion-only styles, restores a recent
+// age confirmation (so the age gate never flashes), and reveals all content
 // if the animation bundle has not started within a few seconds.
-const bootScript = `(function(d){d.classList.add('js');setTimeout(function(){if(!d.classList.contains('motion-ready'))d.classList.add('motion-fallback')},4000)})(document.documentElement)`;
+const bootScript = `(function(d){d.classList.add('js');try{var t=+localStorage.getItem('${AGE_STORAGE_KEY}');if(t&&Date.now()-t<${AGE_STORAGE_DAYS}*864e5)d.classList.add('age-ok')}catch(e){}setTimeout(function(){if(!d.classList.contains('motion-ready'))d.classList.add('motion-fallback')},4000)})(document.documentElement)`;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -96,7 +98,6 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
             code: l,
             nativeName: localeMeta[l].nativeName,
             htmlLang: localeMeta[l].htmlLang,
-            draft: localeMeta[l].status === "draft",
           }))}
         />
         {dict.draftNotice ? (

@@ -19,7 +19,7 @@
       "contact": "Kontakt"
     }
   },
-  "draftNotice": "Nacrt prevoda — čeka odobrenje.",
+  "draftNotice": "",
   "hero": {
     "eyebrow": "Rajal Distillery — od 1999.",
     "titleA": "Umetnost",
@@ -106,9 +106,18 @@
     "titleA": "Boca koju",
     "titleB": "vredi podeliti.",
     "facts": [
-      { "label": "Zapremina", "value": "0,7 L" },
-      { "label": "Alkohol", "value": "18% vol." },
-      { "label": "Poreklo", "value": "Proizvedeno u Srbiji" }
+      {
+        "label": "Zapremina",
+        "value": "0,7 L"
+      },
+      {
+        "label": "Alkohol",
+        "value": "18% vol."
+      },
+      {
+        "label": "Poreklo",
+        "value": "Proizvedeno u Srbiji"
+      }
     ],
     "body": "Proizvodi se u namerno ograničenim godišnjim količinama. Nije masovna proizvodnja. Stvoren da se pamti.",
     "cta": "Pošaljite upit",
@@ -132,16 +141,29 @@
     "tagline": "Porodična srpska destilerija · Od 1999.",
     "product": "Liker od dunje i meda · 0,7 L · 18% vol.",
     "responsible": "Uživajte odgovorno. Namenjeno punoletnim osobama.",
-    "legalPending": "Pravne informacije biće objavljene ovde.",
     "legal": {
+      "label": "Pravne informacije",
       "privacy": "Politika privatnosti",
       "imprint": "Impresum",
-      "terms": "Uslovi korišćenja"
+      "cookies": "Kolačići i skladište"
     },
     "rights": "Rajal Distillery. Sva prava zadržana."
   },
   "notFound": {
     "title": "Stranica nije pronađena.",
     "back": "Nazad na početnu"
+  },
+  "legalPage": {
+    "back": "Nazad na početnu"
+  },
+  "ageGate": {
+    "title": "Dobro došli u Rajal Distillery",
+    "question": "Da li ste punoletni — imate najmanje 18 godina?",
+    "yes": "Da, imam 18 ili više godina",
+    "no": "Ne",
+    "deniedTitle": "Žao nam je.",
+    "deniedText": "Ovaj sajt je namenjen isključivo punoletnim osobama.",
+    "changeAnswer": "Promeni odgovor",
+    "note": "Vaša potvrda se čuva na ovom uređaju 30 dana. Bez kolačića, bez praćenja."
   }
 }

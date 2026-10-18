@@ -21,10 +21,10 @@ export const localeMeta: Record<
   }
 > = {
   en: { nativeName: "English", htmlLang: "en", ogLocale: "en_GB", status: "approved" },
-  sr: { nativeName: "Srpski", htmlLang: "sr-Latn", ogLocale: "sr_RS", status: "draft" },
-  hu: { nativeName: "Magyar", htmlLang: "hu", ogLocale: "hu_HU", status: "draft" },
-  de: { nativeName: "Deutsch", htmlLang: "de", ogLocale: "de_DE", status: "draft" },
-  fr: { nativeName: "Français", htmlLang: "fr", ogLocale: "fr_FR", status: "draft" },
+  sr: { nativeName: "Srpski", htmlLang: "sr-Latn", ogLocale: "sr_RS", status: "approved" },
+  hu: { nativeName: "Magyar", htmlLang: "hu", ogLocale: "hu_HU", status: "approved" },
+  de: { nativeName: "Deutsch", htmlLang: "de", ogLocale: "de_DE", status: "approved" },
+  fr: { nativeName: "Français", htmlLang: "fr", ogLocale: "fr_FR", status: "approved" },
 };
 
 export const approvedLocales = locales.filter(

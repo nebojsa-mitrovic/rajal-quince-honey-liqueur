@@ -40,7 +40,7 @@ public/video/               hero video slot (empty)
 ## Editing content
 
 - **Copy:** edit `content/<locale>.json`. Every locale file must have the same keys as `en.json`, and `tsc` fails if one is missing.
-- **Translations:** Serbian (Latin script), Hungarian, German and French are **drafts that have not been reviewed** by a native speaker. Draft locales show a small notice, are marked `noindex`, are left out of the sitemap and hreflang, and are never picked by the automatic redirect. Once a language is approved, set its `status` to `"approved"` in `lib/i18n.ts` and set `draftNotice` to `""` in its JSON file.
+- **Translations:** English, Serbian (Latin script), Hungarian, German and French are all published. If you add a language that still needs review, set its `status` to `"draft"` in `lib/i18n.ts` and fill `draftNotice` in its JSON file. Draft locales show a small notice, are marked `noindex`, are left out of the sitemap and hreflang, and are never picked by the automatic redirect.
 - **Contact and legal:** set the `NEXT_PUBLIC_*` variables in `.env.local` or your hosting dashboard (see `.env.example`). While a value is empty, the site shows plain placeholder text, never a link that looks clickable.
 
 ## Hero video
@@ -87,12 +87,20 @@ Originals are kept unaltered except for the file names. `next/image` serves AVIF
 
 Copy and alt text do not claim that the pictured orchard or apiary belongs to the distillery. No bottle cut-out was made, because the photos have no clean edge to cut along. The bottle always appears in its original composition, and soft CSS masks blend the photos' black backdrops into the page.
 
+## Legal pages and age gate
+
+- `/[locale]/privacy`: privacy policy (GDPR and Serbian ZZPL), including the **Cookies & storage** section (`#cookies`).
+- `/[locale]/legal-notice`: legal notice (Impressum).
+- The texts are in `content/legal/{en,sr,de}.ts`. Hungarian and French currently show the English text with a notice. Bump `LEGAL_UPDATED` in `lib/legal.ts` whenever a text changes.
+- **Company details** go in `content/company.ts` (name, address, MB, PIB, representative, hosting provider, log retention). Missing values appear as highlighted `[[placeholders]]`, so nothing is invented.
+- **Age gate** (`components/layout/AgeGate.tsx`) appears on the homepage only, so the legal pages stay reachable. It includes a language switcher, so visitors can change the language before answering. After "Yes", the current time is stored in `localStorage` under `rajal-age-confirmed` for 30 days (`lib/age.ts`). No cookies are set anywhere, so there is no cookie banner. If tracking or embeds are ever added, a consent banner becomes mandatory and the privacy policy must be updated.
+
 ## Known TODOs and launch inputs
 
 - [ ] **Hero video** files and usage rights.
 - [ ] **Contact details:** private and trade email addresses, phone number. Optionally a contact form, which would need its own data handling and privacy notice.
-- [ ] **Legal pages:** privacy policy, legal notice/Impressum, terms. Add the URLs to the env vars.
-- [ ] **Alcohol marketing compliance** for each target market (Serbia and EU countries): whether an age gate is required, the wording of the responsible-drinking message (the French draft uses the Loi Évin wording), restrictions on targeting minors.
+- [ ] **Legal review:** fill in `content/company.ts` and have a lawyer review the privacy policy, legal notice and age gate.
+- [ ] **Alcohol marketing compliance** for each target market (Serbia and EU countries): whether an age gate is required, the wording of the responsible-drinking message (the French version uses the Loi Évin wording), restrictions on targeting minors.
 - [ ] **Cookie/analytics consent** if analytics are added (there are none today).
 - [ ] **Translation review** for sr / hu / de / fr. Confirm whether Serbian should be Latin or Cyrillic script; Cyrillic would need fonts with Cyrillic subsets.
 - [ ] **Product facts:** confirm 0.7 L, 18% vol., "limited annual production", and the label wording.
@@ -105,4 +113,4 @@ Copy and alt text do not claim that the pictured orchard or apiary belongs to th
 2. `npm run build`. It must finish without errors; every locale is prerendered.
 3. Run `scripts/screenshots.mjs` against the preview deployment and review the output.
 4. Run Lighthouse on the **production build** (`npm run build && npm start`), in an incognito window without extensions. `npm run dev` scores much lower because of unminified code, the dev overlay and Fast Refresh. Last local measurement: desktop 94–99, mobile 84–85, CLS 0, accessibility/best practices/SEO 100. LCP is the hero image.
-5. Confirm that `/` redirects to `/en`, that draft locales carry `noindex`, and that `/sitemap.xml` and `/robots.txt` are correct.
+5. Confirm that `/` redirects to the visitor's language and that `/sitemap.xml` and `/robots.txt` are correct.

@@ -19,7 +19,7 @@
       "contact": "Kapcsolat"
     }
   },
-  "draftNotice": "Fordítási vázlat — jóváhagyásra vár.",
+  "draftNotice": "",
   "hero": {
     "eyebrow": "Rajal Distillery — 1999 óta",
     "titleA": "A birs és a méz",
@@ -106,9 +106,18 @@
     "titleA": "Egy palack, amelyet",
     "titleB": "érdemes megosztani.",
     "facts": [
-      { "label": "Térfogat", "value": "0,7 L" },
-      { "label": "Alkohol", "value": "18% vol." },
-      { "label": "Származás", "value": "Szerbiában készült" }
+      {
+        "label": "Térfogat",
+        "value": "0,7 L"
+      },
+      {
+        "label": "Alkohol",
+        "value": "18% vol."
+      },
+      {
+        "label": "Származás",
+        "value": "Szerbiában készült"
+      }
     ],
     "body": "Szándékosan korlátozott éves mennyiségben készül. Nem tömegtermék. Arra teremtve, hogy emlékezetes legyen.",
     "cta": "Ajánlatkérés",
@@ -132,16 +141,29 @@
     "tagline": "Családi tulajdonú szerb lepárló · 1999 óta",
     "product": "Birsalmás-mézes likőr · 0,7 L · 18% vol.",
     "responsible": "Fogyassza felelősséggel. Csak nagykorúak számára.",
-    "legalPending": "A jogi információk itt kerülnek közzétételre.",
     "legal": {
-      "privacy": "Adatvédelem",
+      "label": "Jogi információk",
+      "privacy": "Adatvédelmi tájékoztató",
       "imprint": "Impresszum",
-      "terms": "Felhasználási feltételek"
+      "cookies": "Sütik és tárolás"
     },
     "rights": "Rajal Distillery. Minden jog fenntartva."
   },
   "notFound": {
     "title": "Az oldal nem található.",
     "back": "Vissza a kezdőlapra"
+  },
+  "legalPage": {
+    "back": "Vissza a kezdőlapra"
+  },
+  "ageGate": {
+    "title": "Üdvözöljük a Rajal Distillery oldalán",
+    "question": "Betöltötte az országában alkoholfogyasztáshoz előírt korhatárt — legalább 18 éves?",
+    "yes": "Igen, elmúltam 18",
+    "no": "Nem",
+    "deniedTitle": "Sajnáljuk.",
+    "deniedText": "Az oldal csak az alkoholfogyasztás törvényes korhatárát betöltött személyek számára elérhető.",
+    "changeAnswer": "Válasz módosítása",
+    "note": "A megerősítést 30 napig tároljuk ezen az eszközön. Nincsenek sütik, nincs követés."
   }
 }

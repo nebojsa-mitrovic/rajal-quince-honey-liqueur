@@ -17,6 +17,9 @@ const viewports = [
   { name: "1920", width: 1920, height: 1080 },
 ];
 
+// Pretend the visitor already confirmed their age, so layout checks see the page.
+const confirmAge = () => localStorage.setItem("rajal-age-confirmed", String(Date.now()));
+
 async function scrollThrough(page) {
   const height = await page.evaluate(() => document.documentElement.scrollHeight);
   for (let y = 0; y < height; y += 400) {
@@ -37,6 +40,7 @@ for (const vp of viewports) {
       reducedMotion: motion,
       deviceScaleFactor: 1,
     });
+    await context.addInitScript(confirmAge);
     const page = await context.newPage();
     page.on("console", (msg) => {
       if (["error", "warning"].includes(msg.type())) problems.push(`[${vp.name}/${motion}] ${msg.text()}`);
@@ -86,6 +90,7 @@ for (const vp of viewports) {
 
 // Accessibility smoke: images without alt, heading order, duplicate ids.
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+await context.addInitScript(confirmAge);
 const page = await context.newPage();
 await page.goto(`${base}/en`, { waitUntil: "networkidle" });
 const a11y = await page.evaluate(() => {
@@ -123,6 +128,35 @@ const menuClosed = await page.locator("#mobile-menu").isHidden();
 const focusBack = await page.evaluate(() => document.activeElement?.getAttribute("aria-controls"));
 if (!menuVisible || !menuClosed || focusBack !== "mobile-menu")
   problems.push(`[menu] visible=${menuVisible} closed=${menuClosed} focusReturned=${focusBack}`);
+
+// Age gate: shown on a first visit, traps focus, remembered after "Yes".
+{
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const gatePage = await ctx.newPage();
+  await gatePage.goto(`${base}/en`, { waitUntil: "networkidle" });
+  const gate = gatePage.locator("[data-age-gate]");
+  await gatePage.screenshot({ path: join(outDir, "age-gate.png") });
+  const shown = await gate.isVisible();
+  const mainInert = await gatePage.evaluate(() => document.getElementById("main")?.inert);
+  await gatePage.getByRole("button", { name: "No" }).click();
+  await gatePage.screenshot({ path: join(outDir, "age-gate-denied.png") });
+  await gatePage.getByRole("button", { name: "Change my answer" }).click();
+  await gatePage.getByRole("button", { name: /Yes/ }).click();
+  const hiddenAfterYes = await gate.isHidden();
+  await gatePage.reload({ waitUntil: "networkidle" });
+  const hiddenAfterReload = await gate.isHidden();
+  const legalOpen = await (async () => {
+    const p = await ctx.newPage();
+    await p.goto(`${base}/en/privacy`, { waitUntil: "networkidle" });
+    await p.screenshot({ path: join(outDir, "privacy.png"), fullPage: true });
+    return (await p.locator("[data-age-gate]").count()) === 0;
+  })();
+  if (!shown || !mainInert || !hiddenAfterYes || !hiddenAfterReload || !legalOpen)
+    problems.push(
+      `[age-gate] shown=${shown} mainInert=${mainInert} hiddenAfterYes=${hiddenAfterYes} remembered=${hiddenAfterReload} legalUngated=${legalOpen}`,
+    );
+  await ctx.close();
+}
 
 await browser.close();
 

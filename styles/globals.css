@@ -267,6 +267,19 @@ section[id] {
   }
 }
 
+/* Age gate: visible only with JS and without a stored confirmation. */
+.age-gate {
+  display: none;
+}
+
+.js:not(.age-ok) .age-gate {
+  display: flex;
+}
+
+.js:not(.age-ok):has(.age-gate) body {
+  overflow: hidden;
+}
+
 /* Mobile menu scroll lock */
 .menu-open,
 .menu-open body {

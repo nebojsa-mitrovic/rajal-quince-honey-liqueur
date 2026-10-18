@@ -1,13 +1,14 @@
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { localeMeta, locales } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site-config";
 import { Wordmark } from "./Wordmark";
 
 export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const { footer } = dict;
-  const legalLinks = (Object.keys(siteConfig.legal) as (keyof typeof siteConfig.legal)[])
-    .map((key) => ({ key, href: siteConfig.legal[key], label: footer.legal[key] }))
-    .filter((link): link is typeof link & { href: string } => link.href !== null);
+  const legalLinks = [
+    { href: `/${locale}/legal-notice`, label: footer.legal.imprint },
+    { href: `/${locale}/privacy`, label: footer.legal.privacy },
+    { href: `/${locale}/privacy#cookies`, label: footer.legal.cookies },
+  ];
 
   return (
     <footer className="bg-[linear-gradient(180deg,#20241a_0%,#14160f_100%)] px-5 pt-20 pb-10 text-sm text-muted sm:px-8 lg:px-[7vw]">
@@ -44,19 +45,20 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: Dictionary 
             </ul>
           </nav>
 
-          {legalLinks.length > 0 ? (
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+          <nav aria-label={footer.legal.label}>
+            <ul className="flex flex-wrap gap-x-6 gap-y-1">
               {legalLinks.map((link) => (
-                <li key={link.key}>
-                  <a href={link.href} className="underline-offset-4 hover:text-gold hover:underline">
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="flex min-h-11 items-center underline-offset-4 hover:text-gold hover:underline"
+                  >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-          ) : (
-            <p className="text-muted/80">{footer.legalPending}</p>
-          )}
+          </nav>
         </div>
       </div>
       <p className="mx-auto mt-12 max-w-[110rem] text-xs text-muted/70">© {footer.rights}</p>

@@ -19,7 +19,7 @@
       "contact": "Kontakt"
     }
   },
-  "draftNotice": "Übersetzungsentwurf — noch nicht freigegeben.",
+  "draftNotice": "",
   "hero": {
     "eyebrow": "Rajal Distillery — seit 1999",
     "titleA": "Die Kunst von",
@@ -106,9 +106,18 @@
     "titleA": "Eine Flasche, die man",
     "titleB": "gerne teilt.",
     "facts": [
-      { "label": "Inhalt", "value": "0,7 L" },
-      { "label": "Alkohol", "value": "18 % vol." },
-      { "label": "Herkunft", "value": "Hergestellt in Serbien" }
+      {
+        "label": "Inhalt",
+        "value": "0,7 L"
+      },
+      {
+        "label": "Alkohol",
+        "value": "18 % vol."
+      },
+      {
+        "label": "Herkunft",
+        "value": "Hergestellt in Serbien"
+      }
     ],
     "body": "In bewusst begrenzten Jahresmengen hergestellt. Keine Massenproduktion. Geschaffen, um in Erinnerung zu bleiben.",
     "cta": "Anfrage senden",
@@ -132,16 +141,29 @@
     "tagline": "Serbische Brennerei in Familienbesitz · Seit 1999",
     "product": "Quitten-Honig-Likör · 0,7 L · 18 % vol.",
     "responsible": "Bitte verantwortungsvoll genießen. Für Erwachsene im gesetzlichen Mindestalter.",
-    "legalPending": "Rechtliche Informationen werden hier veröffentlicht.",
     "legal": {
+      "label": "Rechtliches",
       "privacy": "Datenschutz",
       "imprint": "Impressum",
-      "terms": "Nutzungsbedingungen"
+      "cookies": "Cookies & Speicher"
     },
     "rights": "Rajal Distillery. Alle Rechte vorbehalten."
   },
   "notFound": {
     "title": "Diese Seite wurde nicht gefunden.",
     "back": "Zur Startseite"
+  },
+  "legalPage": {
+    "back": "Zur Startseite"
+  },
+  "ageGate": {
+    "title": "Willkommen bei Rajal Distillery",
+    "question": "Haben Sie das gesetzliche Mindestalter für Alkohol in Ihrem Land erreicht — mindestens 18 Jahre?",
+    "yes": "Ja, ich bin mindestens 18",
+    "no": "Nein",
+    "deniedTitle": "Es tut uns leid.",
+    "deniedText": "Diese Website ist nur für Personen im gesetzlichen Mindestalter für Alkohol bestimmt.",
+    "changeAnswer": "Antwort ändern",
+    "note": "Ihre Bestätigung wird 30 Tage auf diesem Gerät gespeichert. Keine Cookies, kein Tracking."
   }
 }
