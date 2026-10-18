@@ -21,7 +21,6 @@ export function Craft({ dict }: { dict: Dictionary["craft"] }) {
                   fill
                   sizes="(min-width: 1024px) 38vw, (min-width: 640px) 60vw, 86vw"
                   quality={72}
-                  placeholder="blur"
                   className="object-cover object-[50%_40%]"
                 />
               </div>
@@ -40,7 +39,6 @@ export function Craft({ dict }: { dict: Dictionary["craft"] }) {
                 fill
                 sizes="(min-width: 1024px) 26vw, 52vw"
                 quality={72}
-                placeholder="blur"
                 className="object-cover"
               />
             </div>

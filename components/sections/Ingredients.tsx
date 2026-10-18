@@ -45,7 +45,7 @@ function PinnedSequence({ dict }: { dict: Dict }) {
   const steps = [dict.quince, dict.honey];
   return (
     <div className="ing-pinned">
-      <div data-ing-stage className="relative h-svh overflow-hidden">
+      <div data-ing-stage className="sticky top-0 h-svh overflow-hidden">
         <div className="mx-auto grid h-full max-w-[110rem] grid-cols-12 items-center gap-x-[3vw] px-[7vw]">
           {/* Text column with progress rail */}
           <div data-ing-text className="col-span-4 flex items-center gap-10">
@@ -94,7 +94,6 @@ function PinnedSequence({ dict }: { dict: Dict }) {
                   fill
                   sizes="58vw"
                   quality={72}
-                  placeholder="blur"
                   className="object-cover object-[50%_48%]"
                 />
               </div>
@@ -109,7 +108,6 @@ function PinnedSequence({ dict }: { dict: Dict }) {
                   fill
                   sizes="58vw"
                   quality={72}
-                  placeholder="blur"
                   className="object-cover"
                 />
               </div>
@@ -152,7 +150,6 @@ function StackedSequence({ dict }: { dict: Dict }) {
               fill
               sizes="(min-width: 768px) 45vw, 100vw"
               quality={72}
-              placeholder="blur"
               className="object-cover"
             />
           </div>
@@ -169,7 +166,6 @@ function StackedSequence({ dict }: { dict: Dict }) {
               fill
               sizes="(min-width: 768px) 45vw, 88vw"
               quality={72}
-              placeholder="blur"
               className="object-cover"
             />
           </div>

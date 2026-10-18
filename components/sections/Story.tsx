@@ -22,7 +22,6 @@ export function Story({ dict }: { dict: Dictionary["story"] }) {
                   fill
                   sizes="(min-width: 1024px) 58vw, 100vw"
                   quality={72}
-                  placeholder="blur"
                   className="object-cover object-[35%_60%]"
                 />
               </div>
@@ -38,7 +37,6 @@ export function Story({ dict }: { dict: Dictionary["story"] }) {
                   fill
                   sizes="(min-width: 1024px) 20vw, 42vw"
                   quality={72}
-                  placeholder="blur"
                   className="object-cover"
                 />
               </div>

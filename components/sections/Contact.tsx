@@ -53,7 +53,6 @@ export function Contact({ dict }: { dict: Dict }) {
                 fill
                 sizes="(min-width: 1024px) 30vw, 90vw"
                 quality={72}
-                placeholder="blur"
                 className="object-cover"
               />
             </div>

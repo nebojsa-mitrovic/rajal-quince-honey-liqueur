@@ -26,9 +26,8 @@ export function Bottle({ dict }: { dict: Dictionary["bottle"] }) {
                 src={bottle}
                 alt={dict.imageAlt}
                 fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                sizes="(min-width: 1024px) 58vh, (min-width: 640px) 34rem, 100vw"
                 quality={82}
-                placeholder="blur"
                 className="object-cover"
               />
             </div>

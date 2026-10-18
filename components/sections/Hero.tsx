@@ -25,8 +25,7 @@ export function Hero({ dict }: { dict: Dictionary["hero"] }) {
           fill
           sizes="(min-width: 900px) and (min-aspect-ratio: 1/1) 67svh, 100vw"
           quality={82}
-          placeholder="blur"
-          className="hero-still-enter object-cover"
+          className="object-cover"
         />
       </div>
 

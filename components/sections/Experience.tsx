@@ -18,7 +18,6 @@ export function Experience({ dict }: { dict: Dictionary["experience"] }) {
             fill
             sizes="(min-width: 1024px) 64vw, 100vw"
             quality={82}
-            placeholder="blur"
             className="object-cover object-[44%_55%] lg:object-[38%_50%]"
           />
         </div>

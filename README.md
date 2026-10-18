@@ -53,14 +53,14 @@ The still photo stays underneath as the poster and the fallback. The video only 
 
 ## Motion
 
-`components/animation/PageMotion.tsx` is the only place where scroll animation is defined. It loads GSAP lazily and keeps everything inside one `gsap.matchMedia()`:
+`components/animation/PageMotion.tsx` is the only place where scroll animation is defined. Entry reveals use an IntersectionObserver with a CSS transition. GSAP is loaded lazily, **only on screens 768px and wider** with motion allowed, so phones never download it. All GSAP effects live inside one `gsap.matchMedia()`:
 
 | Element | Behaviour |
 | --- | --- |
 | Hero | photo scales 1 → 1.05 and the copy fades upward as you scroll (scrubbed, not pinned) |
-| `[data-reveal]` | one-time fade/rise on entry |
+| `[data-reveal]` | one-time fade/rise on entry (CSS, every device) |
 | `[data-parallax]` | gentle yPercent drift on the inner image wrapper, from tablet width up |
-| Ingredients | desktop only (≥1024×600): pinned for 2 viewport heights, quince → honey (rises in) → a separate typographic "secret" beat, with a progress rail |
+| Ingredients | desktop only (≥1024×600): held by CSS `position: sticky` in a track whose height (3 viewports) is reserved up front, so there is no layout shift; GSAP only scrubs the timeline: quince → honey (rises in) → a separate typographic "secret" beat, with a progress rail |
 | Bottle | one scrubbed reveal (opacity, rise, scale settling from 1.16 to 1, CSS glow) |
 
 The ingredients section has two renderings: a pinned one and a stacked editorial one. CSS media queries pick between them, so there is no layout shift. Mobile, short screens, reduced motion and visitors without JS get the stacked layout with native scrolling. With `prefers-reduced-motion: reduce` there is no pinning, no parallax and nothing hidden. If the animation bundle has not started after 4 s, all content is revealed anyway.
@@ -104,5 +104,5 @@ Copy and alt text do not claim that the pictured orchard or apiary belongs to th
 1. Set `NEXT_PUBLIC_SITE_URL` to the production origin, plus any confirmed contact, legal and video variables.
 2. `npm run build`. It must finish without errors; every locale is prerendered.
 3. Run `scripts/screenshots.mjs` against the preview deployment and review the output.
-4. Run Lighthouse with mobile throttling on `/en` (target 90+) and check LCP, which should be the hero image.
+4. Run Lighthouse on the **production build** (`npm run build && npm start`), in an incognito window without extensions. `npm run dev` scores much lower because of unminified code, the dev overlay and Fast Refresh. Last local measurement: desktop 94–99, mobile 84–85, CLS 0, accessibility/best practices/SEO 100. LCP is the hero image.
 5. Confirm that `/` redirects to `/en`, that draft locales carry `noindex`, and that `/sitemap.xml` and `/robots.txt` are correct.
