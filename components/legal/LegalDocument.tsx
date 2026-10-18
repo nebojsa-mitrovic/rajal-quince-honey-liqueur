@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import type { Block, LegalDoc } from "@/lib/legal";
-import type { Locale } from "@/lib/i18n";
+import { localeMeta, type Locale } from "@/lib/i18n";
 import { LEGAL_UPDATED } from "@/lib/legal";
 
 /** Renders `[[label]]` markers as visibly highlighted placeholders. */
@@ -48,7 +48,7 @@ function BlockView({ block }: { block: Block }) {
       {block.rows.map(([label, value]) => (
         <div key={label} className="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6">
           <dt className="text-xs tracking-[0.14em] text-muted uppercase sm:pt-1">{label}</dt>
-          <dd className="break-words text-ivory/90">
+          <dd className="wrap-break-word text-ivory/90">
             <Text value={value} />
           </dd>
         </div>
@@ -66,9 +66,11 @@ type Props = {
 };
 
 export function LegalDocument({ doc, locale, updatedLabel, backLabel, fallbackNotice }: Props) {
-  const updated = new Intl.DateTimeFormat(locale, { dateStyle: "long", timeZone: "UTC" }).format(
-    new Date(LEGAL_UPDATED),
-  );
+  // htmlLang (e.g. sr-Latn) so Serbian dates use Latin script.
+  const updated = new Intl.DateTimeFormat(localeMeta[locale].htmlLang, {
+    dateStyle: "long",
+    timeZone: "UTC",
+  }).format(new Date(LEGAL_UPDATED));
 
   return (
     <main

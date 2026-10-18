@@ -3,6 +3,7 @@ import type { LegalBuilder } from "@/lib/legal";
 const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageKey, ageStorageDays }) => {
   const name = p(c.name, "Firmenname");
   const address = `${p(c.street, "Straße und Hausnummer")}, ${p(c.postalCode, "PLZ")} ${p(c.city, "Ort")}, Serbien`;
+  const legalForm = c.legalForm === "d.o.o." ? "Gesellschaft mit beschränkter Haftung (d.o.o.)" : p(c.legalForm, "Rechtsform");
   const mail = p(email, "E-Mail-Adresse");
 
   return {
@@ -19,7 +20,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
             "Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) und des serbischen Datenschutzgesetzes (ZZPL) ist:",
             {
               rows: [
-                ["Unternehmen", `${name} ${p(c.legalForm, "Rechtsform")}`],
+                ["Unternehmen", name],
                 ["Anschrift", address],
                 ["E-Mail", mail],
                 ["Telefon", p(phone, "Telefonnummer")],
@@ -47,7 +48,10 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             `Diese Website wird bei ${p(c.hostingProvider, "Hosting-Anbieter, Anschrift")} gehostet. Beim Aufruf der Website erfasst der Server automatisch technische Informationen, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, verweisende Seite, Browsertyp und -version sowie Betriebssystem.`,
             "Dies ist technisch erforderlich, um die Website auszuliefern sowie ihre Sicherheit und Stabilität zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren, funktionsfähigen Website). Eine Zusammenführung mit anderen Datenquellen oder eine Identifizierung findet nicht statt.",
-            `Die Logdaten werden spätestens nach ${p(c.logRetentionDays, "Anzahl")} Tagen gelöscht, sofern sie nicht zur Aufklärung eines konkreten Sicherheitsvorfalls benötigt werden. Der Hosting-Anbieter verarbeitet diese Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags (Art. 28 DSGVO). Soweit Daten außerhalb der EU/des EWR oder Serbiens verarbeitet werden, erfolgt die Übermittlung auf Grundlage von ${p(c.transferSafeguard, "Angemessenheitsbeschluss oder Standardvertragsklauseln")}.`,
+            c.logRetentionDays !== null
+              ? `Die Logdaten werden spätestens nach ${c.logRetentionDays} Tagen gelöscht, sofern sie nicht zur Aufklärung eines konkreten Sicherheitsvorfalls benötigt werden.`
+              : "Die Logdaten werden nur so lange gespeichert, wie es für diese Zwecke erforderlich ist, und anschließend gelöscht, sofern sie nicht zur Aufklärung eines konkreten Sicherheitsvorfalls benötigt werden.",
+            "Der Hosting-Anbieter verarbeitet diese Daten in unserem Auftrag auf Grundlage eines Auftragsverarbeitungsvertrags (Art. 28 DSGVO). Soweit Daten außerhalb der EU/des EWR verarbeitet werden, erfolgt die Übermittlung auf Grundlage der EU-Standardvertragsklauseln.",
           ],
         },
         {
@@ -122,7 +126,8 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             {
               rows: [
-                ["Unternehmen", `${name} ${p(c.legalForm, "Rechtsform")}`],
+                ["Unternehmen", name],
+                ["Rechtsform", legalForm],
                 ["Anschrift", address],
                 ["Vertreten durch", p(c.representative, "vertretungsberechtigte Person")],
                 ["Register", "Serbische Agentur für Wirtschaftsregister (APR)"],
@@ -145,7 +150,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
         },
         {
           heading: "Inhaltlich verantwortlich",
-          blocks: [`${p(c.representative, "Name")}, ${address}`],
+          blocks: [`${p(c.contentResponsible, "Name")}, Vertriebsleiter, ${address}`],
         },
         {
           heading: "Verantwortungsvoller Genuss",

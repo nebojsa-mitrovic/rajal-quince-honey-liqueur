@@ -134,6 +134,8 @@
     "tradeText": "Pour les distributeurs, importateurs, hôtels, restaurants, bars, cavistes et cadeaux d’entreprise.",
     "emailLabel": "E-mail",
     "phoneLabel": "Téléphone",
+    "addressLabel": "Adresse",
+    "country": "Serbie",
     "pending": "Coordonnées bientôt disponibles.",
     "imageAlt": "Un apiculteur tenant une bouteille de liqueur de coing au miel Rajal"
   },

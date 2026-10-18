@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Dictionary } from "@/lib/i18n";
+import { company } from "@/content/company";
 import { siteConfig } from "@/lib/site-config";
 import beekeeperBottle from "@/public/images/beekeeper-holding-bottle.jpg";
 
@@ -7,6 +8,7 @@ type Dict = Dictionary["contact"];
 
 export function Contact({ dict }: { dict: Dict }) {
   const { privateEmail, tradeEmail, phone } = siteConfig.contact;
+  const hasAddress = company.street && company.postalCode && company.city;
 
   return (
     <section
@@ -27,20 +29,52 @@ export function Contact({ dict }: { dict: Dict }) {
           </div>
 
           <div className="mt-14 grid gap-12 sm:grid-cols-2 sm:gap-10">
-            <EnquiryBlock
-              title={dict.privateTitle}
-              text={dict.privateText}
-              email={privateEmail}
-              phone={phone}
-              dict={dict}
-            />
+            <EnquiryBlock title={dict.privateTitle} text={dict.privateText} />
             <EnquiryBlock
               title={dict.tradeTitle}
               text={dict.tradeText}
-              email={tradeEmail ?? privateEmail}
-              phone={phone}
+              // Only shown when trade enquiries have their own address.
+              email={tradeEmail !== privateEmail ? tradeEmail : null}
               dict={dict}
             />
+          </div>
+
+          <div data-reveal className="mt-12">
+            {privateEmail || phone ? (
+              <dl className="grid gap-6 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-8">
+                {privateEmail ? (
+                  <div>
+                    <dt className="eyebrow">{dict.emailLabel}</dt>
+                    <dd className="mt-2">
+                      <ContactLink href={`mailto:${privateEmail}`}>{privateEmail}</ContactLink>
+                    </dd>
+                  </div>
+                ) : null}
+                {phone ? (
+                  <div>
+                    <dt className="eyebrow">{dict.phoneLabel}</dt>
+                    <dd className="mt-2">
+                      <ContactLink href={`tel:${phone.replace(/[^\d+]/g, "")}`}>{phone}</ContactLink>
+                    </dd>
+                  </div>
+                ) : null}
+                {hasAddress ? (
+                  <div className="sm:col-span-2">
+                    <dt className="eyebrow">{dict.addressLabel}</dt>
+                    <dd className="mt-2 not-italic">
+                      <address className="prose-body not-italic text-ivory/90">
+                        {company.contactName}
+                        <br />
+                        {company.street}, {company.postalCode} {company.city}, {dict.country}
+                      </address>
+                    </dd>
+                  </div>
+                ) : null}
+              </dl>
+            ) : (
+              // Deliberately plain text: nothing that looks clickable until real details exist.
+              <p className="text-sm text-gold-soft/90 italic">{dict.pending}</p>
+            )}
           </div>
         </div>
 
@@ -63,46 +97,38 @@ export function Contact({ dict }: { dict: Dict }) {
   );
 }
 
+function ContactLink({ href, children }: { href: string; children: string }) {
+  return (
+    <a
+      href={href}
+      className="inline-flex min-h-11 items-center border-b border-gold font-serif text-xl break-all text-ivory transition-colors hover:text-gold sm:text-2xl"
+    >
+      {children}
+    </a>
+  );
+}
+
 function EnquiryBlock({
   title,
   text,
   email,
-  phone,
   dict,
 }: {
   title: string;
   text: string;
-  email: string | null;
-  phone: string | null;
-  dict: Dict;
+  email?: string | null;
+  dict?: Dict;
 }) {
   return (
     <div data-reveal className="border-t border-line/60 pt-6">
       <h3 className="font-serif text-2xl">{title}</h3>
       <p className="prose-body mt-3 text-[0.95rem]">{text}</p>
-      {email || phone ? (
-        <ul className="mt-6 space-y-1">
-          {email ? (
-            <li>
-              <a href={`mailto:${email}`} className="text-link normal-case tracking-normal">
-                <span className="sr-only">{dict.emailLabel}: </span>
-                {email}
-              </a>
-            </li>
-          ) : null}
-          {phone ? (
-            <li>
-              <a href={`tel:${phone.replace(/[^\d+]/g, "")}`} className="text-link normal-case tracking-normal">
-                <span className="sr-only">{dict.phoneLabel}: </span>
-                {phone}
-              </a>
-            </li>
-          ) : null}
-        </ul>
-      ) : (
-        // Deliberately plain text: nothing that looks clickable until real details exist.
-        <p className="mt-6 text-sm text-gold-soft/90 italic">{dict.pending}</p>
-      )}
+      {email && dict ? (
+        <p className="mt-4">
+          <span className="sr-only">{dict.emailLabel}: </span>
+          <ContactLink href={`mailto:${email}`}>{email}</ContactLink>
+        </p>
+      ) : null}
     </div>
   );
 }

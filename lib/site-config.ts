@@ -1,6 +1,6 @@
 /**
- * Launch inputs that must not be invented. Everything here is read from
- * environment variables (see `.env.example`); unset values render a safe
+ * Launch inputs that must not be invented. Values can be overridden with
+ * environment variables (see `.env.example`); anything unset renders a safe
  * placeholder instead of a fake contact action.
  */
 
@@ -13,9 +13,11 @@ export const siteConfig = {
   siteUrl: env(process.env.NEXT_PUBLIC_SITE_URL) ?? "http://localhost:3000",
 
   contact: {
-    privateEmail: env(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
+    privateEmail: env(process.env.NEXT_PUBLIC_CONTACT_EMAIL) ?? "liqueurquince@gmail.com",
+    /** Separate address for trade enquiries; falls back to the main email. */
     tradeEmail: env(process.env.NEXT_PUBLIC_TRADE_EMAIL),
-    phone: env(process.env.NEXT_PUBLIC_CONTACT_PHONE),
+    /** Display format; the tel: link strips the spaces. */
+    phone: env(process.env.NEXT_PUBLIC_CONTACT_PHONE) ?? "+381 63 899 1629",
   },
 
   /**

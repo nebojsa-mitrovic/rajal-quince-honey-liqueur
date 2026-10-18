@@ -134,6 +134,8 @@
     "tradeText": "Forgalmazóknak, importőröknek, szállodáknak, éttermeknek, bároknak, szaküzleteknek és céges ajándékozáshoz.",
     "emailLabel": "E-mail",
     "phoneLabel": "Telefon",
+    "addressLabel": "Cím",
+    "country": "Szerbia",
     "pending": "Elérhetőségeink hamarosan.",
     "imageAlt": "Egy méhész egy üveg Rajal birsalmás-mézes likőrt tart"
   },

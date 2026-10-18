@@ -3,6 +3,7 @@ import type { LegalBuilder } from "@/lib/legal";
 const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageKey, ageStorageDays }) => {
   const name = p(c.name, "naziv firme");
   const address = `${p(c.street, "ulica i broj")}, ${p(c.postalCode, "poštanski broj")} ${p(c.city, "grad")}, Srbija`;
+  const legalForm = c.legalForm === "d.o.o." ? "Društvo sa ograničenom odgovornošću (d.o.o.)" : p(c.legalForm, "pravna forma");
   const mail = p(email, "email adresa");
 
   return {
@@ -19,7 +20,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
             "Rukovalac odgovoran za obradu podataka na ovom sajtu u smislu Opšte uredbe EU o zaštiti podataka (GDPR) i Zakona o zaštiti podataka o ličnosti Republike Srbije (ZZPL) je:",
             {
               rows: [
-                ["Firma", `${name} ${p(c.legalForm, "pravna forma")}`],
+                ["Firma", name],
                 ["Adresa", address],
                 ["Email", mail],
                 ["Telefon", p(phone, "broj telefona")],
@@ -47,7 +48,10 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             `Ovaj sajt hostuje ${p(c.hostingProvider, "hosting provajder, adresa")}. Kada otvorite sajt, server automatski beleži tehničke podatke koje vaš pregledač šalje: IP adresu, datum i vreme zahteva, traženu stranicu, stranicu sa koje dolazite, vrstu i verziju pregledača i operativni sistem.`,
             "Ovo je tehnički neophodno za prikaz sajta i za njegovu bezbednost i stabilnost. Pravni osnov: član 6. stav 1. tačka (f) GDPR-a, odnosno član 12. stav 1. tačka 6) ZZPL-a (legitimni interes za bezbedan i funkcionalan sajt). Podaci se ne spajaju sa drugim izvorima i ne koriste se za vašu identifikaciju.",
-            `Log podaci se brišu najkasnije posle ${p(c.logRetentionDays, "broj")} dana, osim ako su potrebni za istragu konkretnog bezbednosnog incidenta. Hosting provajder obrađuje ove podatke u naše ime na osnovu ugovora o obradi podataka (član 28. GDPR-a). Ako se podaci obrađuju van EU/EEP ili Srbije, prenos se zasniva na ${p(c.transferSafeguard, "odluci o adekvatnosti ili standardnim ugovornim klauzulama")}.`,
+            c.logRetentionDays !== null
+              ? `Log podaci se brišu najkasnije posle ${c.logRetentionDays} dana, osim ako su potrebni za istragu konkretnog bezbednosnog incidenta.`
+              : "Log podaci se čuvaju samo onoliko koliko je potrebno za ove svrhe i zatim se brišu, osim ako su potrebni za istragu konkretnog bezbednosnog incidenta.",
+            "Hosting provajder obrađuje ove podatke u naše ime na osnovu ugovora o obradi podataka (član 28. GDPR-a). Ako se podaci obrađuju van EU/EEP, prenos se zasniva na standardnim ugovornim klauzulama EU.",
           ],
         },
         {
@@ -122,7 +126,8 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             {
               rows: [
-                ["Firma", `${name} ${p(c.legalForm, "pravna forma")}`],
+                ["Firma", name],
+                ["Pravna forma", legalForm],
                 ["Adresa", address],
                 ["Zastupnik", p(c.representative, "ovlašćeni zastupnik")],
                 ["Registar", "Agencija za privredne registre (APR)"],
@@ -145,7 +150,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
         },
         {
           heading: "Odgovorno lice za sadržaj",
-          blocks: [`${p(c.representative, "ime i prezime")}, ${address}`],
+          blocks: [`${p(c.contentResponsible, "ime i prezime")}, direktor prodaje, ${address}`],
         },
         {
           heading: "Odgovorno uživanje",

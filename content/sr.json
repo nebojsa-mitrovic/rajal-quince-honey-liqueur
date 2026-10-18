@@ -134,6 +134,8 @@
     "tradeText": "Za distributere, uvoznike, hotele, restorane, barove, specijalizovane prodavnice i korporativne poklone.",
     "emailLabel": "Email",
     "phoneLabel": "Telefon",
+    "addressLabel": "Adresa",
+    "country": "Srbija",
     "pending": "Kontakt podaci uskoro.",
     "imageAlt": "Pčelar drži bocu Rajal likera od dunje i meda"
   },

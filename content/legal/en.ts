@@ -3,6 +3,7 @@ import type { LegalBuilder } from "@/lib/legal";
 const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageKey, ageStorageDays }) => {
   const name = p(c.name, "company name");
   const address = `${p(c.street, "street and number")}, ${p(c.postalCode, "postal code")} ${p(c.city, "city")}, Serbia`;
+  const legalForm = c.legalForm === "d.o.o." ? "Limited liability company (d.o.o.)" : p(c.legalForm, "legal form");
   const mail = p(email, "email address");
 
   return {
@@ -19,7 +20,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
             "The controller responsible for data processing on this website within the meaning of the EU General Data Protection Regulation (GDPR) and the Serbian Law on Personal Data Protection (ZZPL) is:",
             {
               rows: [
-                ["Company", `${name} ${p(c.legalForm, "legal form")}`],
+                ["Company", name],
                 ["Address", address],
                 ["Email", mail],
                 ["Phone", p(phone, "phone number")],
@@ -47,7 +48,10 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             `This website is hosted by ${p(c.hostingProvider, "hosting provider, address")}. When you open the website, the server automatically records technical information that your browser transmits: IP address, date and time of the request, the page requested, the referring page, browser type and version, and operating system.`,
             "This is technically necessary to deliver the website and to keep it secure and stable. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in a secure, functioning website). The data is not combined with other data sources and is not used to identify you.",
-            `Log data is deleted after ${p(c.logRetentionDays, "number of")} days at the latest, unless it is needed to investigate a specific security incident. The hosting provider processes this data on our behalf under a data processing agreement (Art. 28 GDPR). Where data is processed outside the EU/EEA or Serbia, the transfer is based on ${p(c.transferSafeguard, "adequacy decision or standard contractual clauses")}.`,
+            c.logRetentionDays !== null
+              ? `Log data is deleted after ${c.logRetentionDays} days at the latest, unless it is needed to investigate a specific security incident.`
+              : "Log data is kept only as long as necessary for these purposes and is then deleted, unless it is needed to investigate a specific security incident.",
+            "The hosting provider processes this data on our behalf under a data processing agreement (Art. 28 GDPR). Where data is processed outside the EU/EEA, the transfer is based on the EU Standard Contractual Clauses.",
           ],
         },
         {
@@ -122,7 +126,8 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
           blocks: [
             {
               rows: [
-                ["Company", `${name} ${p(c.legalForm, "legal form")}`],
+                ["Company", name],
+                ["Legal form", legalForm],
                 ["Address", address],
                 ["Represented by", p(c.representative, "authorised representative")],
                 ["Register", "Serbian Business Registers Agency (APR)"],
@@ -145,7 +150,7 @@ const build: LegalBuilder = ({ pending: p, company: c, email, phone, ageStorageK
         },
         {
           heading: "Responsible for content",
-          blocks: [`${p(c.representative, "name")}, ${address}`],
+          blocks: [`${p(c.contentResponsible, "name")}, Sales Director, ${address}`],
         },
         {
           heading: "Responsible enjoyment",
