@@ -21,6 +21,10 @@ node scripts/screenshots.mjs http://localhost:3000 screenshots   # needs `npx pl
 
 `scripts/screenshots.mjs` takes screenshots at 360, 390, 768, 1024, 1440 and 1920 px, with and without reduced motion, including the three beats of the pinned sequence. It also reports horizontal overflow, console errors, missing alt text, heading-order jumps, the skip link and the mobile menu's Escape and focus handling.
 
+### Why the production build uses webpack
+
+`npm run build` runs `next build --webpack`. Turbopack, Next's default bundler, processes Tailwind/PostCSS in a helper process that binds a local port, and SiteGround's build sandbox forbids that (`binding to a port – Operation not permitted`). Webpack runs PostCSS in-process. `npm run dev` still uses Turbopack locally. Tailwind is configured through `postcss.config.mjs`.
+
 ## Structure
 
 ```text
