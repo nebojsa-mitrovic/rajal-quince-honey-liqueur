@@ -6,8 +6,7 @@ Poslednje ažuriranje: 18. oktobar 2026.
 
 - [ ] **Zakonski zastupnik firme** (ime iz APR izvoda, deo „Zakonski zastupnici“, obično direktor).
   Upisati u [content/company.ts](../content/company.ts) → `representative`. Ovo je jedino prazno polje u impresumu.
-- [ ] **Domen sajta** (npr. `https://rajal.rs`).
-  Upisati kao `NEXT_PUBLIC_SITE_URL` (u `.env.local` i u podešavanjima hostinga).
+- [x] **Domen sajta:** `https://quinceliqueur.com` (podešen na SiteGround-u, sa HTTPS-om).
 - [ ] **Logo** u vektorskom formatu (SVG), ako postoji. Sada stoji tekstualni natpis „RAJAL / DISTILLERY“.
 - [ ] **Hero video** (opciono): `hero-desktop.mp4` i `hero-mobile.mp4` u `public/video/`, pa `NEXT_PUBLIC_HERO_VIDEO=true`. Detalji su u README-u.
 
@@ -28,7 +27,7 @@ Poslednje ažuriranje: 18. oktobar 2026.
 - [ ] Pravni tekstovi na **mađarskom i francuskom** (sada se prikazuje engleska verzija sa napomenom).
 - [ ] Poseban email za distributere i hotele → `NEXT_PUBLIC_TRADE_EMAIL`.
 - [ ] **Kontakt forma** (za sada samo mailto). Predlog: Web3Forms (besplatno), pa dopuna politike privatnosti.
-- [ ] **Hosting:** pitati SiteGround podršku da li plan podržava Next.js (Node.js). Ako ne podržava, treba drugi hosting ili statički export.
+- [x] **Hosting:** SiteGround Node.js projekat, automatski deploy grane `production`.
 
 ## Već urađeno
 

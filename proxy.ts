@@ -18,7 +18,17 @@ function preferredLocale(request: NextRequest): Locale {
 }
 
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
+
+  // One canonical host: www.quinceliqueur.com → quinceliqueur.com (permanent).
+  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? "";
+  if (host.startsWith("www.")) {
+    return NextResponse.redirect(`https://${host.slice(4)}${pathname}${search}`, 308);
+  }
+
+  // Files (sitemap.xml, robots.txt, icon.svg, images…) are served as is.
+  if (pathname.includes(".")) return;
+
   const firstSegment = pathname.split("/")[1];
   if (hasLocale(firstSegment)) return;
 
@@ -27,6 +37,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Skip Next internals and any request for a file (images, video, icons…).
-  matcher: ["/((?!_next|.*\\..*).*)"],
+  // Everything except Next's build assets, so the www redirect also covers files.
+  matcher: ["/((?!_next/).*)"],
 };
