@@ -8,7 +8,6 @@ type Dict = Dictionary["contact"];
 
 export function Contact({ dict }: { dict: Dict }) {
   const { privateEmail, tradeEmail, phone } = siteConfig.contact;
-  const hasAddress = company.street && company.postalCode && company.city;
 
   return (
     <section
@@ -58,23 +57,17 @@ export function Contact({ dict }: { dict: Dict }) {
                     </dd>
                   </div>
                 ) : null}
-                {hasAddress ? (
-                  <div className="sm:col-span-2">
-                    <dt className="eyebrow">{dict.addressLabel}</dt>
-                    <dd className="mt-2 not-italic">
-                      <address className="prose-body not-italic text-ivory/90">
-                        {company.contactName}
-                        <br />
-                        {company.street}, {company.postalCode} {company.city}, {dict.country}
-                      </address>
-                    </dd>
-                  </div>
-                ) : null}
               </dl>
             ) : (
               // Deliberately plain text: nothing that looks clickable until real details exist.
               <p className="text-sm text-gold-soft/90 italic">{dict.pending}</p>
             )}
+            {/* Name and country only — the full address lives in the legal notice. */}
+            <address className="prose-body mt-8 not-italic text-ivory/90">
+              {company.contactName}
+              <br />
+              {dict.country}
+            </address>
           </div>
         </div>
 

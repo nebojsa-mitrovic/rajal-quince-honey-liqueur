@@ -27,6 +27,8 @@ Poslednje ažuriranje: 18. oktobar 2026.
 
 - [ ] Pravni tekstovi na **mađarskom i francuskom** (sada se prikazuje engleska verzija sa napomenom).
 - [ ] Poseban email za distributere i hotele → `NEXT_PUBLIC_TRADE_EMAIL`.
+- [ ] **Kontakt forma** (za sada samo mailto). Predlog: Web3Forms (besplatno), pa dopuna politike privatnosti.
+- [ ] **Hosting:** pitati SiteGround podršku da li plan podržava Next.js (Node.js). Ako ne podržava, treba drugi hosting ili statički export.
 
 ## Već urađeno
 

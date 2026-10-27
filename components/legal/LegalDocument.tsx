@@ -17,9 +17,31 @@ function Text({ value }: { value: string }) {
             {part}
           </mark>
         ) : (
-          <Fragment key={i}>{part}</Fragment>
+          <Fragment key={i}>
+            <Linkified value={part} />
+          </Fragment>
         ),
       )}
+    </>
+  );
+}
+
+const CONTACT_PATTERN = /([\w.+-]+@[\w-]+(?:\.[\w-]+)+|\+\d[\d ]{6,}\d)/g;
+
+/** Turns email addresses and international phone numbers into mailto:/tel: links. */
+function Linkified({ value }: { value: string }) {
+  const parts = value.split(CONTACT_PATTERN);
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (i % 2 === 0) return <Fragment key={i}>{part}</Fragment>;
+        const href = part.includes("@") ? `mailto:${part}` : `tel:${part.replace(/\s/g, "")}`;
+        return (
+          <a key={i} href={href} className="underline underline-offset-4 hover:text-gold">
+            {part}
+          </a>
+        );
+      })}
     </>
   );
 }
