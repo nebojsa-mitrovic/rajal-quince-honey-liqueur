@@ -6,8 +6,9 @@ type NetworkInformation = { saveData?: boolean };
 
 /**
  * Progressive hero video. Renders nothing until the client has confirmed that
- * motion is welcome and Save-Data is off; the still photo underneath stays the
- * poster and the permanent fallback (blocked autoplay, errors, reduced motion).
+ * motion is welcome and Save-Data is off; the poster still underneath stays the
+ * permanent fallback (blocked autoplay, errors, reduced motion). The video is
+ * paused while the hero is off screen to save battery and CPU.
  */
 export function HeroVideo({ desktopSrc, mobileSrc }: { desktopSrc: string; mobileSrc: string }) {
   const [src, setSrc] = useState<string | null>(null);
@@ -27,9 +28,16 @@ export function HeroVideo({ desktopSrc, mobileSrc }: { desktopSrc: string; mobil
   useEffect(() => {
     const video = ref.current;
     if (!video || !src) return;
-    video.play().catch(() => {
-      /* Autoplay blocked: keep the still. */
+    const play = () =>
+      video.play().catch(() => {
+        /* Autoplay blocked: keep the poster. */
+      });
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) play();
+      else video.pause();
     });
+    observer.observe(video);
+    return () => observer.disconnect();
   }, [src]);
 
   if (!src) return null;
@@ -38,7 +46,7 @@ export function HeroVideo({ desktopSrc, mobileSrc }: { desktopSrc: string; mobil
     <video
       ref={ref}
       aria-hidden
-      className={`absolute inset-0 -z-10 h-full w-full object-cover transition-opacity duration-[1500ms] ${
+      className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ${
         playing ? "opacity-100" : "opacity-0"
       }`}
       src={src}
@@ -46,7 +54,8 @@ export function HeroVideo({ desktopSrc, mobileSrc }: { desktopSrc: string; mobil
       loop
       playsInline
       autoPlay
-      preload="metadata"
+      preload="auto"
+      disablePictureInPicture
       onPlaying={() => setPlaying(true)}
       onError={() => setPlaying(false)}
     />

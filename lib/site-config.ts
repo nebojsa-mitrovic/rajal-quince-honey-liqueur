@@ -21,12 +21,12 @@ export const siteConfig = {
   },
 
   /**
-   * Hero video slot. Drop the files into `public/video/` and set
-   * NEXT_PUBLIC_HERO_VIDEO=true. The still photo remains the poster and the
+   * Full-screen hero video (on by default; NEXT_PUBLIC_HERO_VIDEO=false
+   * switches back to the bottle photo hero). The poster still remains the
    * fallback for reduced motion, Save-Data and blocked autoplay.
    */
   heroVideo:
-    env(process.env.NEXT_PUBLIC_HERO_VIDEO) === "true"
+    env(process.env.NEXT_PUBLIC_HERO_VIDEO) !== "false"
       ? {
           desktop: "/video/hero-desktop.mp4",
           mobile: "/video/hero-mobile.mp4",

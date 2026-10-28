@@ -216,6 +216,12 @@ section[id] {
     animation: hero-enter 1.4s var(--ease-out-soft) both;
   }
 
+  /* Headline is the LCP element: slide only, no fade (a transparent element
+     does not count as painted, which would delay LCP by the animation). */
+  .hero-rise {
+    animation: hero-rise 1.4s var(--ease-out-soft) both;
+  }
+
   .hero-enter-delayed {
     animation: hero-enter 1.4s 0.25s var(--ease-out-soft) both;
   }
@@ -233,6 +239,12 @@ section[id] {
 }
 
 /* Scale only: an opacity fade would delay the hero photo as the LCP element. */
+@keyframes hero-rise {
+  from {
+    transform: translate3d(0, 1.75rem, 0);
+  }
+}
+
 @keyframes hero-still {
   from {
     transform: scale(1.04);
