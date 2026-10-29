@@ -136,7 +136,13 @@
     "phoneLabel": "Telefon",
     "country": "Serbien",
     "pending": "Kontaktdaten folgen in Kürze.",
-    "imageAlt": "Ein Imker hält eine Flasche Rajal Quitten-Honig-Likör"
+    "people": {
+      "eyebrow": "Die Menschen hinter RAJAL",
+      "title": "Eine persönliche Note hinter jeder Flasche.",
+      "intro": "Hinter RAJAL steht die Hingabe an das Handwerk, an sorgfältig ausgewählte Zutaten und an die Tradition, etwas zu schaffen, das man gerne teilt.",
+      "role": "Vertriebsleiter, Rajal Distillery",
+      "portraitAlt": "Porträt von Strahinja Babović, Vertriebsleiter der Rajal Distillery"
+    }
   },
   "footer": {
     "tagline": "Serbische Brennerei in Familienbesitz · Seit 1999",

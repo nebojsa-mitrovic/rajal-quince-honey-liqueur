@@ -136,7 +136,13 @@
     "phoneLabel": "Telefon",
     "country": "Szerbia",
     "pending": "Elérhetőségeink hamarosan.",
-    "imageAlt": "Egy méhész egy üveg Rajal birsalmás-mézes likőrt tart"
+    "people": {
+      "eyebrow": "A RAJAL mögött álló emberek",
+      "title": "Személyes érintés minden palack mögött.",
+      "intro": "A RAJAL mögött a mesterség iránti elkötelezettség, a gondosan válogatott összetevők és annak hagyománya áll, hogy valami megosztásra érdemeset hozzunk létre.",
+      "role": "Értékesítési igazgató, Rajal Distillery",
+      "portraitAlt": "Strahinja Babović, a Rajal Distillery értékesítési igazgatójának portréja"
+    }
   },
   "footer": {
     "tagline": "Családi tulajdonú szerb lepárló · 1999 óta",

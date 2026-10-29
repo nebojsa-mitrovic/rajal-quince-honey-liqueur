@@ -136,7 +136,13 @@
     "phoneLabel": "Telefon",
     "country": "Srbija",
     "pending": "Kontakt podaci uskoro.",
-    "imageAlt": "Pčelar drži bocu Rajal likera od dunje i meda"
+    "people": {
+      "eyebrow": "Ljudi iza RAJAL-a",
+      "title": "Lični pečat iza svake boce.",
+      "intro": "Iza RAJAL-a stoji posvećenost zanatu, pažljivo biranim sastojcima i tradiciji stvaranja nečega što vredi podeliti.",
+      "role": "Direktor prodaje, Rajal Distillery",
+      "portraitAlt": "Portret Strahinje Babovića, direktora prodaje Rajal Distillery"
+    }
   },
   "footer": {
     "tagline": "Porodična srpska destilerija · Od 1999.",

@@ -136,7 +136,13 @@
     "phoneLabel": "Phone",
     "country": "Serbia",
     "pending": "Contact details coming soon.",
-    "imageAlt": "A beekeeper holding a bottle of Rajal Quince Honey Liqueur"
+    "people": {
+      "eyebrow": "The people behind RAJAL",
+      "title": "A personal touch behind every bottle.",
+      "intro": "Behind RAJAL is a commitment to craftsmanship, carefully chosen ingredients and the tradition of creating something worth sharing.",
+      "role": "Sales Director, Rajal Distillery",
+      "portraitAlt": "Portrait of Strahinja Babović, Sales Director of Rajal Distillery"
+    }
   },
   "footer": {
     "tagline": "Family-owned Serbian distillery · Since 1999",

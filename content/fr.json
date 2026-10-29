@@ -136,7 +136,13 @@
     "phoneLabel": "Téléphone",
     "country": "Serbie",
     "pending": "Coordonnées bientôt disponibles.",
-    "imageAlt": "Un apiculteur tenant une bouteille de liqueur de coing au miel Rajal"
+    "people": {
+      "eyebrow": "Les visages de RAJAL",
+      "title": "Une touche personnelle derrière chaque bouteille.",
+      "intro": "Derrière RAJAL, il y a un engagement envers le savoir-faire, des ingrédients choisis avec soin et la tradition de créer quelque chose qui mérite d’être partagé.",
+      "role": "Directeur commercial, Rajal Distillery",
+      "portraitAlt": "Portrait de Strahinja Babović, directeur commercial de Rajal Distillery"
+    }
   },
   "footer": {
     "tagline": "Distillerie serbe familiale · Depuis 1999",
